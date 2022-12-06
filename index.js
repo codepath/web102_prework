@@ -39,6 +39,8 @@ function addGamesToPage(games) {
 
         // set the inner HTML using a template literal to display some info 
         // about each game
+        // TIP: if your images are not displaying, make sure there is space
+        // between the end of the src attribute and the end of the tag ("/>")
 
 
         // append the game to the games-container
