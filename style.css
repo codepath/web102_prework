@@ -19,8 +19,19 @@ body {
     margin-top: -10px;
 }
 
+/* Added: more properties other than display */
 .stats-container {
     display: flex;
+    flex-direction: row;
+    flex-grow: 3;
+    align-items: flex-start;
+
+}
+
+/* Added: when the user hover their cursor over the stats */
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
