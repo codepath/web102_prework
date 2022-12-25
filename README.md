@@ -1,31 +1,23 @@
-# WEB102 Prework - *Web102_Prework*
+# WEB102 Prework - **
 
-Submitted by: **Tommy Nguyen**
+Submitted by: ****
 
-**Web102_Prework** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **22** hours spent in total
+Time spent: **** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [X] The introduction section explains the background of the company and how many games remain unfunded.
-* [X] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [] The introduction section explains the background of the company and how many games remain unfunded.
+* [] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [X] List anything else that you can get done to improve the app functionality!
-- Created a button-game-section to allow user to scroll to the OurGame section.
-- Created a search bar for user to input a Game Name and app will scroll to its position.
-- The Our Games sections buttons will turn red when selected.
-- Funded and unfunded game card have desingated color.
-- Funded and unfunded game card and app info can dynamtically change depend on user input.
-- Incorporated a PopUp Tab for user to fund the game that they like.
-- Incorporated a Scroll Up button on the bottom right corner which allow the user to scroll up to the top of the app.
-- Incorporated many amazing animations for some elements. 
+* [] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
