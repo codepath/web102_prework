@@ -1,23 +1,32 @@
-# WEB102 Prework - *Name of App Here*
 
-Submitted by: **Your Name Here**
+# WEB102 Prework - *Web102_Prework*
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+Submitted by: **Tommy Nguyen**
 
-Time spent: **X** hours spent in total
+**Web102_Prework** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+
+Time spent: **22** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [X] The introduction section explains the background of the company and how many games remain unfunded.
+* [X] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [X] List anything else that you can get done to improve the app functionality!
+- Created a button-game-section to allow user to scroll to the OurGame section.
+- Created a search bar for user to input a Game Name and app will scroll to its position.
+- The Our Games sections buttons will turn red when selected.
+- Funded and unfunded game card have desingated color.
+- Funded and unfunded game card and app info can dynamtically change depend on user input.
+- Incorporated a PopUp Tab for user to fund the game that they like.
+- Incorporated a Scroll Up button on the bottom right corner which allow the user to scroll up to the top of the app.
+- Incorporated many amazing animations for some elements. 
 
 ## Video Walkthrough
 
@@ -35,10 +44,13 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
+- There was alot of research needed inorder for me to implement many functions of the app (scroll to element, get specfic HTML elements, animations, positioning div, and many more). 
+- Encounter alot of erros because I forgot some important features of Javascript methods. For example, the method sort will mutate the oringal array. 
+- Spent of time dealing with addEventListener. The method addEventListener doesn't work well with non-static element. Therefore, there was alot of work needed to work around this case. Hence, many original functions was modify inorder to make my element work with addEventListener. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2022] [Tommy Nguyen]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
