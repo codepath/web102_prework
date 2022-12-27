@@ -23,9 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-![NandiniJirobe_Web102_Prework](https://user-images.githubusercontent.com/95235229/209621594-9006c0ba-5b4a-4f6b-bb40-8a4fe3a0f18d.gif)
-
+<img src='https://github.com/nandinijirobe/web102_prework/blob/main/website_demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
