@@ -64,19 +64,6 @@ addGamesToPage(GAMES_JSON)
  * Skills used: arrow functions, reduce, template literals
 */
 
-// // grab the contributions card element
-// const contributionsCard = document.getElementById("num-contributions");
-
-// // use reduce() to count the number of total contributions by summing the backers
-// const totalContributions = GAMES_JSON.reduce( (acc, game) => {
-//     return acc + game.backers;
-//   }, 0);
-
-// // set the inner HTML using a template literal and toLocaleString to get a number with commas
-// contributionsCard.innerHTML = totalContributions.toLocaleString(); 
-
-//================================================================================================================================>
-
 // use reduce() to count the number of total contributions by summing the backers
 const totalContributions = GAMES_JSON.reduce( (acc, game) => {
     return acc + game.backers;
@@ -161,7 +148,6 @@ function filterUnfundedOnly() {
         return game.goal > game.pledged;
       });
     // use the function we previously created to add the unfunded games to the DOM
-    console.log("here1");
     addGamesToPage(underFundedGames);
 }
 
@@ -175,7 +161,6 @@ function filterFundedOnly() {
       });
 
     // use the function we previously created to add unfunded games to the DOM
-    console.log("here2");
     addGamesToPage(fundedGames);
 }
 
@@ -184,7 +169,6 @@ function showAllGames() {
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
-    console.log("here3");
     addGamesToPage(GAMES_JSON);
 }
 
@@ -222,12 +206,10 @@ const costOfFunded = GAMES_JSON.reduce( (acc, game) => {
     return acc;
   }, 0);
 
-console.log("this is num funded: " + numFunded);
-console.log("this is cost funded: " + costOfFunded);
+
 // create a string that explains the number of unfunded games using the ternary operator
 const explaination =`A total of $${totalPledged.toLocaleString()} has been raised for ${(GAMES_JSON.length).toLocaleString()} games. Currently ${numUnderFunded} ${numUnderFunded <=1 ? "game" : "games"} remains underfunded. We need your help to fund these amazing games!`;
 
-console.log(explaination);
 // create a new DOM element containing the template string and append it to the description container
 descriptionContainer.append(explaination);
 /************************************************************************************
