@@ -1,8 +1,7 @@
 /*****************************************************************************
+ 
+*****************************************************************************/
 
-*/
-
-// import the JSON data about the crowd funded games from the games.js file
 import GAMES_DATA from './games.js';
 
 const GAMES_JSON = JSON.parse(GAMES_DATA)
@@ -15,8 +14,10 @@ function deleteChildElements(parent) {
 
 const gamesContainer = document.getElementById("games-container");
 
+const contributionsCard = document.getElementById("num-contributions");
+const raisedCard = document.getElementById("total-raised");
+const gamesCard = document.getElementById("num-games");
 
-// create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
     for (let i = 0; i < games.length; i++) {
         let newDiv = document.createElement("div");
@@ -32,21 +33,20 @@ function addGamesToPage(games) {
         gamesContainer.append(newDiv)
     }
 }
+
 addGamesToPage(GAMES_JSON)
 
-const contributionsCard = document.getElementById("num-contributions");
 const contributionsCount = GAMES_JSON.reduce((acc, count) => {
     return acc + count.backers
 }, 0)
 contributionsCard.innerHTML = contributionsCount.toLocaleString("en-US")
 
-const raisedCard = document.getElementById("total-raised");
+
 const raisedCount = GAMES_JSON.reduce((acc, count) => {
     return acc + count.pledged
 }, 0)
 raisedCard.innerHTML = "$" + raisedCount.toLocaleString("en-US")
 
-const gamesCard = document.getElementById("num-games");
 gamesCard.innerHTML = GAMES_JSON.length
 
 function filterUnfundedOnly() {
@@ -110,18 +110,16 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 
 const [top1, top2, ...others] = sortedGames
 
-console.log(top1, top2)
-
 let name1, desc1, pl1, goal1, bkrs1, img1 = top1;
 let name2, desc2, pl2, goal2, bkrs2, img2 = top2;
 
 const topGameElement = document.createElement("p")
-topGameElement.textContent = top1.name
+topGameElement.textContent = name1
 firstGameContainer.append(topGameElement)
 
 
 const secondGameElement = document.createElement("p")
-secondGameElement.textContent = top2.name
+secondGameElement.textContent = name2
 secondGameContainer.append(secondGameElement)
 
 
