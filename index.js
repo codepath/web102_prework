@@ -47,6 +47,10 @@ raisedCard.innerHTML = "$" + raisedCount.toLocaleString("en-US");
 
 gamesCard.innerHTML = GAMES_JSON.length;
 
+const unfundedBtn = document.getElementById("unfunded-btn");
+const fundedBtn = document.getElementById("funded-btn");
+const allBtn = document.getElementById("all-btn");
+
 function filterUnfundedOnly() {
   deleteChildElements(gamesContainer);
 
@@ -73,17 +77,13 @@ function showAllGames() {
   addGamesToPage(GAMES_JSON);
 }
 
-const unfundedBtn = document.getElementById("unfunded-btn");
-const fundedBtn = document.getElementById("funded-btn");
-const allBtn = document.getElementById("all-btn");
-
 fundedBtn.addEventListener("click", filterFundedOnly);
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 allBtn.addEventListener("click", showAllGames);
 
 const descriptionContainer = document.getElementById("description-container");
 
-const unfundedteredGameCount = GAMES_JSON.filter((game) => {
+const unfundedGameCount = GAMES_JSON.filter((game) => {
   return game.pledged < game.goal;
 }).length;
 
@@ -91,8 +91,8 @@ let descriptionString = `A total of $${raisedCount.toLocaleString(
   "en-US"
 )} has been raised for ${GAMES_JSON.length} ${
   GAMES_JSON.length > 1 ? "games" : "game"
-}. Currently, ${unfundedteredGameCount} ${
-  unfundedteredGameCount > 1 ? "games remain" : "game remains"
+}. Currently, ${unfundedGameCount} ${
+  unfundedGameCount > 1 ? "games remain" : "game remains"
 } unfunded. We need your help to fund these amazing games!`;
 
 const newDescriptionDiv = document.createElement("p");
