@@ -1,4 +1,4 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Spar*
 
 Submitted by: **John Areola (JonnieDev)**
 
@@ -20,7 +20,10 @@ The following **optional** features are implemented:
 * [ ] List anything else that you can get done to improve the app functionality!
 * [ ] "Our Games" in the header link to the Our games section
 * [ ] Responsive on various screens
-
+* [ ] Search bar to filter games based on their title
+* [ ] Updated styling to make the page more visually appealing
+* [ ] 
+ 
 
 ## Video Walkthrough
 
