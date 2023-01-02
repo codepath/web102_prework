@@ -1,4 +1,4 @@
-# WEB102 Prework - *Spar*
+# WEB102 Prework - _Spar_
 
 Submitted by: **John Areola (JonnieDev)**
 
@@ -10,20 +10,18 @@ Time spent: **5** hours spent in total
 
 The following **required** functionality is completed:
 
-* [x] The introduction section explains the background of the company and how many games remain unfunded.
-* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+- [x] The introduction section explains the background of the company and how many games remain unfunded.
+- [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+- [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+- [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
-* [ ] "Our Games" in the header link to the Our games section
-* [ ] Responsive on various screens
-* [ ] Search bar to filter games based on their title
-* [ ] Updated styling to make the page more visually appealing
-
- 
+- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] "Our Games" in the header link to the Our games section
+- [ ] Responsive on various screens
+- [ ] Search bar to filter games based on their title
+- [ ] Updated styling to make the page more visually appealing
 
 ## Video Walkthrough
 
@@ -31,17 +29,15 @@ Here's a walkthrough of implemented features:
 
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with [ScreenToGif](https://www.screentogif.com/) 
-
+GIF created with [ScreenToGif](https://www.screentogif.com/)
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Challenges faced while building the app
 
 ## License
 
-    Copyright [JonnieDev] [name of copyright owner]
+    Copyright [JonnieDev]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
