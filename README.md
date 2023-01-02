@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 * [ ] Responsive on various screens
 * [ ] Search bar to filter games based on their title
 * [ ] Updated styling to make the page more visually appealing
-* [ ] 
+
  
 
 ## Video Walkthrough
