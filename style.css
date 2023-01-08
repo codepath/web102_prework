@@ -30,10 +30,19 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.stats-card:hover{
+    box-shadow: 0px 0px 30px lightblue;
+
 }
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+    display: flex;
 }
 
 #games-container {
@@ -65,7 +74,14 @@ body {
 #button-container {
     text-align: center;
 }
+#first-game, #second-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align:middle;
 
+
+}
 button {
     font-family: 'Cabin';
     border: none;
