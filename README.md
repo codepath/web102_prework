@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://www.dropbox.com/s/bkzf9yby5dawe06/Animation.gif?dl=0' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='C:\Users\Tariq_u\Desktop\Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <ScreenToGif>
 GIF created with ...  
