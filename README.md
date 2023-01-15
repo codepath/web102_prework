@@ -24,10 +24,11 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='Users\Tariq_u\Desktop\Animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/X0JwQkU' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <ScreenToGif>
-GIF created with ...  
+GIF created with [ScreenToGif](https://www.screentogif.com/) for Windows
+
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
