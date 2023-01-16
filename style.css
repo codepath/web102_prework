@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: white;
 }
 
 #tentacles {
@@ -19,8 +19,14 @@ body {
     margin-top: -10px;
 }
 
+
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.stats-container:hover{
+    box-shadow: 0 0 30px lightblue
 }
 
 .stats-card {
@@ -55,6 +61,7 @@ body {
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    box-shadow: 0 0 15px black;
 }
 
 .game-card:hover {
@@ -72,4 +79,7 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+button:hover{
+    box-shadow: 0 0 10px black;
 }
