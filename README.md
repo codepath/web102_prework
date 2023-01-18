@@ -1,40 +1,48 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - Sea Monster Crowdfunding
 
-Submitted by: **Your Name Here**
+Submitted by: Annie Mai
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+Sea Monster Crowdfunding is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: 6 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+[✅] The introduction section explains the background of the company and how many games remain unfunded.
+
+[✅] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+
+[✅] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+
+[✅] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+[✅] List anything else that you can get done to improve the app functionality!
+    
+    🔧 Added a fixed nav bar that allows users to select which part of the page they would like to scroll to.
+
+    🎨 Changed the box shadows and the colors a little.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src="assets/Web_Demo.gif" title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app:
+
+    💭 I was unsure of how to use certain functions and there were some new concepts that I was not aware of. However, it was similar to small assignments I have done in the past, just using a different method so I was able to get over the small road block!
+
+    💭 In addition, I felt that there were cases where there could've been a simpler appraoch to certain steps in the assignment, so at times I was a bit stumped on what the instructions wanted me to implement.
 
 ## License
 

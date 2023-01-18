@@ -5,8 +5,13 @@ body {
     background-color: #758190;
 }
 
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 115px;
+}
+
 #tentacles {
-    width: 50px;
+    width: 100px;
 }
 
 .header {
@@ -14,14 +19,61 @@ body {
     background-color: lightblue;
     padding: 1%;
     align-items: center;
-    margin-left: -10px;
-    margin-right: -10px;
-    margin-top: -10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.nav{
+    text-decoration: none;
+    color: rgb(74, 94, 119);
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0 5% 0 7%;
+	padding: 30px 20px 30px 20px;
+	width: 10%;
+	text-align: center;
+	justify-content: right;
+	align-items: right;
+}
+
+.nav:hover{
+    background-color: rgb(60, 121, 156);
+    border-radius: 100px;
+    color: antiquewhite;
+}
+
+.home{
+    padding-top: 8rem;
+}
+
+h1{
+    color: rgb(44, 82, 134);
+}
+
+h2{
+    color: rgb(26, 39, 58);
+    padding-top: 3rem;
+}
+
+h3{
+    color: rgb(39, 48, 61);
+}
+
+p{
+    color: rgb(51, 57, 65);
 }
 
 .stats-container {
     display: flex;
+    align-items: flex-start;
 }
+
+/* .stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+} */
 
 .stats-card {
     background-color: #a8b0bc;
@@ -30,6 +82,11 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+}
+
+.stats-card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -73,3 +130,9 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
