@@ -29,22 +29,35 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-
+    for (let i = 0; i < games.length; i++) {
 
         // create a new div element, which will become the game card
-
+        let gameCard = document.createElement("div");
 
         // add the class game-card to the list
-
+        gameCard.classList.add("game-card");
 
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-
+        gameCard.innerHTML =
+        `   <div class="game-card">
+            <img class="game-img" src= "${games[i].img}" >
+            <h2>
+                ${games[i].name}
+            </h2>
+            <p class="description">${games[i].description}</p>
+            <p class="pledged"> Pledged: ${games[i].pledged}</p>
+            <p class="goal"> Goal: ${games[i].goal}</p>
+            </div>
+        `;
 
         // append the game to the games-container
+        //let gamesContainer = document.querySelector(".games-container");
+        gamesContainer.appendChild(gameCard);
 
+    }
 }
 
 // call the function we just defined using the correct variable
@@ -144,7 +157,7 @@ const descriptionContainer = document.getElementById("description-container");
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+const sortedGames = GAMES_JSON.sort((item1, item2) => {
     return item2.pledged - item1.pledged;
 });
 
