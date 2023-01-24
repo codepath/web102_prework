@@ -42,7 +42,7 @@ function addGamesToPage(games) {
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
         gameCard.innerHTML =
-        `   <div class="game-card">
+            `   <div class="game-card">
             <img class="game-img" src= "${games[i].img}" >
             <h2>
                 ${games[i].name}
@@ -59,6 +59,7 @@ function addGamesToPage(games) {
 
     }
 }
+addGamesToPage(GAMES_JSON)
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
@@ -74,20 +75,34 @@ function addGamesToPage(games) {
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
-
+let contributionsCardCount = GAMES_JSON.reduce((total, game) => {
+    return total + game.backers
+}, 0).toLocaleString('en-US');
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
 
+contributionsCard.innerHTML = `<p> ${contributionsCardCount} <p/>`
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
 
 // set inner HTML using template literal
+// set the inner HTML using a template literal and toLocaleString to get a number with commas
 
+let raisedCardAmount = GAMES_JSON.reduce((total, game) => {
+    return total + game.pledged
+}, 0).toLocaleString('en-US', { style: 'currency', currency: 'USD', minimumFractionDigits: 0 });
+
+
+raisedCard.innerHTML = `<p> ${raisedCardAmount} <p/>`
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
 
+let gamesCardTotal = GAMES_JSON.reduce((total, game) => {
+    return total + game.backers
+}, 0).toLocaleString('en-US');
+gamesCard.innerHTML = `<p> ${gamesCardTotal} <p/>`
 
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
