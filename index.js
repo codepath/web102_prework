@@ -219,3 +219,5 @@ const gameTwoDisplay =
 
 gameTwo.innerHTML = gameTwoDisplay
 firstGameContainer.appendChild(gameTwo)
+
+//completed
