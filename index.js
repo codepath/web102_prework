@@ -42,13 +42,23 @@ function addGamesToPage(games) {
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
         const newDivContent = `
-        <img class="game-img" src="${game.img}" alt="game-photo">
-        <h3>${game.name}</h3>
-        <p>${game.description}\n</p> 
-        <p>Supported by ${game.backers} people</p>
+            <img class="game-img" src="${game.img}" alt="game-photo">
+            <h3>${game.name}</h3>
+            <p>${game.description}\n</p> 
+            <p>Supported by ${game.backers} people</p>
         `;
 
         newDiv.innerHTML = newDivContent;
+
+        var words = game.name.split(" ");
+        let searchName = words.reduce( (acc, word) => {
+            return acc + "+" + word
+        }, "");
+        searchName = searchName.slice(1);
+        // console.log(searchName);
+
+        let url = `https://www.google.com/search?q=${searchName}&oq=${searchName}`
+        newDiv.addEventListener("click", () => window.open(url, "_blank"));
 
         // append the game to the games-container
         gamesContainer.appendChild(newDiv);
@@ -201,3 +211,25 @@ let secondGameElement = document.createElement('p')
 secondGameElement.innerHTML = secondGame.name
 
 secondGameContainer.appendChild(secondGameElement)
+
+// Searchbar function
+function searchGame() {
+    deleteChildElements(gamesContainer);
+
+    let input = document.getElementById('searchbar').value
+    input = input.toLowerCase();
+    console.log(input)
+    
+    let searchedList = GAMES_JSON.filter( (game) => {
+        return game.name.toLowerCase().includes(input);
+    });
+
+    console.log(searchedList);
+
+    addGamesToPage(searchedList);
+}
+
+let searchInput = document.getElementById("searchbar");
+searchInput.addEventListener("keyup", () => {
+    searchGame();
+});
