@@ -21,6 +21,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center; /* aligns elements along the cross-axis */
+    cursor: pointer; /* changes cursor to pointer */
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue; /* adds light blue shadow with 
+    30px blur on hover */ 
 }
 
 .stats-card {
