@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
   </head>
 
   <body>
@@ -22,6 +24,18 @@
     <!-- top games & other interesting stats -->
     <h2>Stats</h2>
     <div class="stats-container">
+        <div id="letter-box" class="newsletter">
+            <div id="cut-block" class="cross-sign">
+                <div class="cross-line1"></div>
+                <div class="cross-line2"></div>
+            </div>
+            <h2>Subscribe To Our E-Newsletter</h2>
+            <form method="post">
+                <input type="text" name="name" id="name" placeholder="Your Name" autofocus>
+                <input type="email" name="email" id="email-id" placeholder="Your Email" autofocus>
+                <input type="submit" value="Submit" id="submit-email">
+            </form>
+        </div>
         <div class="stats-card">
             <h3>Individual Contributions</h3>
             <p id="num-contributions">
@@ -56,9 +70,34 @@
         <button id="all-btn">Show All Games</button>
     </div>
     <div id="games-container">
-
+        <div id="back-to-top-btn" class="back-to-top">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+            <div class="arrow-box">
+            </div>
+        </div>
     </div>
-
     <script type="module" src="index.js"></script>
+    <script>
+        $('#submit-email').click(function(event) {
+            event.preventDefault();
+            $.ajax({
+                global: false,
+                type: 'POST',
+                url: '/', // missing quotes
+                data: {
+                    name: $("#name").val(),
+                    email: $("#email-id").val(),
+                },
+                success: function (result) {
+                    console.log(result);
+                },
+                error: function (request, status, error) {
+                    serviceError();
+                }
+            });
+        });
+    </script>
   </body>
 </html>

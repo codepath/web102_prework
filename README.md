@@ -1,44 +1,37 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Games Contribution Listing Web App*
 
-Submitted by: **Your Name Here**
+Submitted by: **SHADAB HUSSAIN**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Games Contribution Listing Web App** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [X] The introduction section explains the background of the company and how many games remain unfunded.
+* [X] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] **Back To Top** button, after clicking on this link website will be scrolled up to the first line of the list of games. This feature will be very useful when the number of games in the list is many more!
+* [x] **News Letter** Dropdown Box, when the page is loaded a dropdown box of **Subscribe To our Newsletter**. This feature will be useful that you can collect the email id of the user's & send it to Database(I have used MySQL database for this project), after that you can send e-mails to the user to convince them for Contributions!
 
 ## Video Walkthrough
-
 Here's a walkthrough of implemented features:
+<img src='https://imgur.com/Sf1Qb8E.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
-
 ## Notes
-
-Describe any challenges encountered while building the app.
+I have discovered many different functionalities of javascript like a filter, reduce, map, and many more, which I will use in my upcoming project. I feel building routing & connecting the web app to the database for storing the name and email id of the database, whoever subscribes to the Newsletter by entering their Name & Email-Id to make sure the data is getting appropriately stored in the Database(Here i have used MySQL) was a little resilient than I thought. Now, at the end journey of Sea Monster Web App was fun i liked it very much. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2023] [SHADAB HUSSAIN]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
