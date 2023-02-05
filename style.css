@@ -21,6 +21,14 @@ body {
 
 .stats-container {
     display: flex;
+    flex-direction: row;
+    text-align: center;
+    display:flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 30px lightblue;
+    background-color: yellow:
+    
 }
 
 .stats-card {
