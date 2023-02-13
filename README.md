@@ -19,10 +19,10 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/gabrielaliera/web102_prework/blob/main/SeaMonster.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a>
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -30,7 +30,7 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+While building this app, I learned how to use Javascript in DOM manipulations. Other topics covered were template literals, arrow functions, reduce & filter functions, ternary operator and spread/destructing operators.
 
 ## License
 
