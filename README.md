@@ -30,7 +30,7 @@ GIF created with <a href="https://www.cockos.com/licecap/">LICEcap.</a>
 
 ## Notes
 
-While building this app, I learned how to use Javascript in DOM manipulations. Other topics covered were template literals, arrow functions, reduce & filter functions, ternary operator and spread/destructing operators.
+While building this app, I learned DOM manipulations and Javascript. Other topics covered were template literals, arrow functions, reduce & filter functions, ternary operator and spread/destructing operators.
 
 ## License
 
