@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; 
+}
+
+th {
+  width: 120px;
+  padding-top:25px;
+  padding-bottom:30px;
+}
+
+td {
+  padding: 5px;
+}
+
+.time{
+  height: 40px;
+}
+
+.Event {
+  width: 100px;
+}
+
+.Event h6,h5 {
+  line-height: 0px;
+  align-content: center;
+}
+
+.pink {
+  background:pink;
+}
+
+.blue {
+  background:rgb(190, 219, 229);
+}
+
+.green {
+  background:rgb(202, 245, 222);
+} 
