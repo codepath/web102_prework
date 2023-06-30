@@ -23,7 +23,7 @@ Add a navigation bar for quick access to the games section.
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/Y19xk0m' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src=![]('https://imgur.com/a/Y19xk0m') title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with LICEcap  
