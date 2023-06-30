@@ -17,8 +17,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
-Add a navigation bar for quick access to the games section.
+* [x] List anything else that you can get done to improve the app functionality!
+* [x] Add a navigation bar for quick access to the games section.
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
