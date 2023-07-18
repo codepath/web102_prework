@@ -26,12 +26,8 @@ The following **optional** features are implemented:
 
 ![](https://github.com/Chrissy-buzz/web102_prework/blob/main/assets/0rov2Rt%20-%20Imgur.gif)
 
-<!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+[ScreenToGif](https://www.screentogif.com/)
 
 ## Notes
 
