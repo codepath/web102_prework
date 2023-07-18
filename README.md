@@ -1,29 +1,29 @@
-# WEB102 Prework - 
+# WEB102 Prework - Sea Monster Crowdfunding
 
-Submitted by: **Your Name Here**
+Submitted by: Christina Persaud
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+Sea Monster Crowdfunding is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: 3 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [done] The introduction section explains the background of the company and how many games remain unfunded.
+* [done] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [done] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [done] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [done] Button added to Nav Bar to Scroll to Our Games Section
+* [done] Updated CSS
+* [in progress] functional search bar
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/KFG0Et3" data-context="false" ><a href="//imgur.com/a/KFG0Et3"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 
 <img src='https://imgur.com/0rov2Rt' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
@@ -36,11 +36,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+No challenges. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2023 Christina Persaud
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
