@@ -1,4 +1,4 @@
-# WEB102 Prework - Sea Monster Games
+# WEB102 Prework - Sea Monster Games :squid:
 
 Submitted by: Melody Nguyen
 
