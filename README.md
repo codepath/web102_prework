@@ -1,32 +1,33 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - Sea Monster Games :squid:
 
-Submitted by: **Your Name Here**
+Submitted by: Melody Nguyen
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+Sea Monster Games is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: 18 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [X] The introduction section explains the background of the company and how many games remain unfunded.
+* [X] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [X] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [X] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [X] List anything else that you can get done to improve the app functionality!
+I changed some of the functionality, for example, the mouse cursor to change only if the clicking event will cause some change and the regular pointer when it does not. Additionally, I changed the background shadow to be of the actual gamecard instead of the container to add a better aesthetic. Moreover, I added a white shadow to the "unfunded", "funded", and "all games" buttons with it being bolded when hovered. I also made the game card italicized if the user hovers over it to catch their attention of what they are looking at.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![](https://github.com/melbmn/web102_prework/blob/main/127.0.0.1_5500_index.html.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with Screencastify
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -36,9 +37,11 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
+A challenge I faced was familiarizing myself with the syntax and logic. I struggled to understand how the javascript communicating with the HTML file and DOM manipulation. I additionally struggled to word the question I needed answered, which extended the research I did with general answers. The most challenging part for me was initally understanding how to use VisualCode and Github and DOM manipulation.
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2023 Melody Nguyen
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
