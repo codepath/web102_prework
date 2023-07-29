@@ -24,7 +24,7 @@ I changed some of the functionality, for example, the mouse cursor to change onl
 
 Here's a walkthrough of implemented features:
 
-<img src='https://i.imgur.com/2ZzACsq.mp4' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![](https://github.com/melbmn/web102_prework/blob/main/127.0.0.1_5500_index.html.gif)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Screencastify
