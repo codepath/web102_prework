@@ -21,6 +21,9 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -73,3 +76,20 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+/* Custom cs for table and tale elements */
+table {
+    border-collapse: collapse;
+    box-shadow: 0 0 30px lightblue;
+    border: 3px solid ;
+    width: 90%;
+}
+
+th, td {
+    border-collapse: collapse;
+    background-color: #a8b0bc;
+    padding: 10px;
+    border: 2 px solid lightblue;
+    box-shadow: 0 0 30px lightblue;
+    box-sizing: border-box;
+  }
