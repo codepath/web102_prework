@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features (Click the link and bypass the warning):
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/UyDZPeN"  ><a href="//imgur.com/a/UyDZPeN">CodePath Website Demo</a></blockquote>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/UyDZPeN"  ><a href="[//imgur.com/a/UyDZPeN](https://i.imgur.com/xvjlWSN.mp4)">CodePath Website Demo</a></blockquote>
 GIF created with ScreenToGif  
 
 ## Notes
