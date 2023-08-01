@@ -4,7 +4,7 @@ Submitted by: **Jaydon Bingham**
 
 **Sea Monster Crowdfunding Web App** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **4.5** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
