@@ -24,8 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/UyDZPeN"  ><a href="//imgur.com/a/UyDZPeN">CodePath Website Demo</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/UyDZPeN"  ><a href="//imgur.com/a/UyDZPeN">CodePath Website Demo</a></blockquote>
 GIF created with ScreenToGif  
 
 ## Notes
