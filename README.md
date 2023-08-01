@@ -29,7 +29,7 @@ GIF created with ScreenToGif
 
 ## Notes
 
-I wasn't incredibly challenged during while building the app, but there were a couple concepts I was unfamiliar with whilst building the app, such as the ternary operator and destructuring. I did a bit of research, and got much more familiar with these concepts, allowing me to finish up development. I was relatively familiar with other parts of the application because of previous experience, and didn't see too much difficulty. Creating a custom improvement was also a bit harder compared to the rest (as it wasn't as guided) but I was able to brainstorm and implement my custom feature after spending a bit of time on it.
+I wasn't incredibly challenged while building the app, but there were a couple concepts I was unfamiliar with, such as the ternary operator and destructuring. I did a bit of research, got much more familiar with these concepts, and finished up development. I was relatively familiar with other parts of the application because of previous experience, and didn't see too much difficulty. Creating a custom improvement was also a bit harder compared to the rest (as it wasn't as guided) but I was able to brainstorm and implement my custom feature after spending a bit of time on it.
 
 ## License
 
