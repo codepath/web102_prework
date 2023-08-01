@@ -36,21 +36,10 @@ function addGamesToPage(games) {
         gameCard.classList.add("game-card");
 
         // Customization: Custom message depending on goal being met or not, made more sense than a single type of message
-        let goalsMet =''
-        if(game["pledged"] >= game["goal"])
-        {
-            goalsMet = `
-            <p> The $${game["goal"].toLocaleString('en-US')} goal has been met!
-            For this game, ${game["backers"].toLocaleString('en-US')} backers have pledged $${game["pledged"].toLocaleString()} total.</p>
-            `;
-        }
-        else
-        {
-            goalsMet = `
-            <p> The $${game["goal"].toLocaleString('en-US')} goal hasn't been met yet!
-            For this game, ${game["backers"].toLocaleString('en-US')} backers have pledged $${game["pledged"].toLocaleString()} total.</p>
-            `;
-        }
+        let goalsMet = `
+        <p> The $${game["goal"].toLocaleString('en-US')} goal ${game["pledged"] >= game["goal"] ? "has been met!": "has not been met."}
+        For this game, ${game["backers"].toLocaleString('en-US')} backers have pledged $${game["pledged"].toLocaleString()} total.</p>
+        `;
 
         // Adding info to page
         const gameInfo = `
@@ -93,8 +82,8 @@ function addGamesToTable(games) {
     document.getElementById("games-container").appendChild(gameTable);
 }
 
-// Function Call
-addGamesToPage(GAMES_JSON);
+// Function Call -> Moved to 248
+// addGamesToPage(GAMES_JSON);
 
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
@@ -255,3 +244,6 @@ const secondGameElement = document.createElement("p");
 const secondGameName = document.createTextNode(`${secondGame["name"]}`);
 secondGameElement.appendChild(secondGameName);
 secondGameContainer.appendChild(secondGameElement);
+
+// Late function call ensures list of games is sorted by pledged
+addGamesToPage(GAMES_JSON);
