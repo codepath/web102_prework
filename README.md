@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented features (Click the link and bypass the warning):
+Here's a walkthrough of implemented features:
 
 <blockquote class="imgur-embed-pub" lang="en" data-id="a/UyDZPeN"  ><a href="https://i.imgur.com/xvjlWSN.mp4">CodePath Website Demo</a></blockquote>
 GIF created with ScreenToGif  
