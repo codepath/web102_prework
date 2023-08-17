@@ -22,8 +22,20 @@ function deleteChildElements(parent) {
  * Skills used: DOM manipulation, for loops, template literals, functions
 */
 
+// DOM - Document Object Model ==> essentially an outline of html components that can be acquired and changed with JS
+// ==> DOM categorizes elements in the HTML document as objects, with their own attributes and content ==> now JS can be used
+// to add, change, delete, recieve or output values from HTML elements (texts, inputs, buttons, etc)
+
 // grab the element with the id games-container
 const gamesContainer = document.getElementById("games-container");
+
+
+// Multiple types of functions: arrow or traditional (arrow functions are more concise versions of traditional functions)
+// Arrow functions are distinct in multiple ways 
+// ==> "this" keyword within traditional functions can refer to the outermost global object, the object that owns the invoked method
+// or the instance of a function (cunstructor invocation)
+// "this" in arrow functions will always refer to the outermost global object ==> no binding
+// ==> no instances can be made from arrow functions aka they cannot be constructor functions
 
 // create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
