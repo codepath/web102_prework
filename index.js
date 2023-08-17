@@ -29,6 +29,9 @@ function deleteChildElements(parent) {
 // grab the element with the id games-container
 const gamesContainer = document.getElementById("games-container");
 
+// Template literals
+// can run functions, expressions, or access values within a string (the string can also contain the syntax of html elements)
+
 
 // Multiple types of functions: arrow or traditional (arrow functions are more concise versions of traditional functions)
 // Arrow functions are distinct in multiple ways 
@@ -41,7 +44,10 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-
+    console.log(games.length)
+    for (let i = 0; i < games.length; i++){
+        console.log(games[i]);
+    }
 
         // create a new div element, which will become the game card
 
@@ -60,6 +66,8 @@ function addGamesToPage(games) {
 }
 
 // call the function we just defined using the correct variable
+addGamesToPage(GAMES_JSON)
+
 // later, we'll call this function using a different list of games
 
 
