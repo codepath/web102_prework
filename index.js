@@ -44,23 +44,27 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
-    console.log(games.length)
+    
     for (let i = 0; i < games.length; i++){
-        console.log(games[i]);
-    }
-
+        //console.log(games[i]);
+        
         // create a new div element, which will become the game card
-
-
         // add the class game-card to the list
+        let gameDiv = document.createElement("div");
+        gameDiv.classList.add("game-card");
+        gameDiv.innerHTML = ` <img class="game-img" src = "${games[i]["img"]}" /> 
+                                <h2 class="game-title">${games[i]["name"]}</h2>
+                                <p class="game-about">${games[i]["description"]}</p>`;
+
+        // append gameDiv HTML element to the external container in the document
+        gamesContainer.appendChild(gameDiv)
+    }
 
 
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-
-
         // append the game to the games-container
 
 }
