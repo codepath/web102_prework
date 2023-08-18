@@ -90,13 +90,28 @@ body {
 }
 
 #button-container {
+    padding: 15px;
     text-align: center;
 }
 
 button {
     font-family: 'Cabin';
-    border: none;
-    padding: 1%;
+    border: solid 2.5px #FFFFFF;
+    padding: 1.25%;
     margin: 1%;
     border-radius: 7px;
+    font-size: 1.25em;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+/* some stylistic modifications for buttons ==> can be improved using JS*/
+button:hover{
+    transition: ease-in-out 0.5s;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: lightblue;
+}
+button:focus{
+    background-color: #FFFFFF;
+    color: lightblue;
 }
