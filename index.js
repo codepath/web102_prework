@@ -81,23 +81,68 @@ addGamesToPage(GAMES_JSON)
  * Skills used: arrow functions, reduce, template literals
 */
 
+// Callback function are functions that can be used as arguments for other functions
+// ==> these are more efficient and allow for flexibility in running multiple functions in a certain order
+
 // grab the contributions card element
 const contributionsCard = document.getElementById("num-contributions");
 
 // use reduce() to count the number of total contributions by summing the backers
+// ==> reduce() is an accumulator function that collapses a list of values into one number, it takes a callback function argument
+// (to indicate what expressions to perform with the values?), and an initial value (e.g 0)
+// the callback function should have the parameters of an accumulator (previousValue), and current value or element
+// ==> can also include entire list and index 
 
+/* Example w/ Spotify Wrapped
+    * const totalListens = songs.reduce( (acc, song) => { // reduce is a method for arrays/lists
+    *   return acc + song.listens;
+    * }, 0);
+*/
+// callback function takes the argument of the changine value of the accumulator (as the program "iterates" through each item)
+// variable and the list itself (songs in this case)
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
+
+function addTotalContributors(){
+    let totalContributors = GAMES_JSON.reduce( (accumulator, game, indexValue) => {
+        // displaying the "looping" through the list
+        let result = accumulator + game["backers"];
+        console.log(`At index ${indexValue}, the accumulated number is ${result}`);
+
+        return result; // becomes the new value for accumulator
+    }, 0);
+    
+    totalContributors = totalContributors.toLocaleString('en-US'); // formatting numbers to include commas depending on country
+    contributionsCard.innerHTML = `<p>${totalContributors}</p>`;
+}
+addTotalContributors();
 
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
+
+function addTotalFunds(){
+    let totalFunds = GAMES_JSON.reduce( (accumulator, game) => {
+        return accumulator + game["pledged"]; // becomes the new value for accumulator
+    }, 0);
+    
+    totalFunds = totalFunds.toLocaleString('en-US'); // formatting numbers to include commas depending on country
+    raisedCard.innerHTML = `<p>$${totalFunds}</p>`;
+}
+addTotalFunds();
 
 // set inner HTML using template literal
 
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
+
+function addTotalGames(){
+   
+    gamesCard.innerHTML = `<p>${GAMES_JSON.length}</p>`;
+
+}
+addTotalGames();
 
 
 /*************************************************************************************
