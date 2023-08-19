@@ -91,7 +91,7 @@ const contributionsCard = document.getElementById("num-contributions");
 // ==> reduce() is an accumulator function that collapses a list of values into one number, it takes a callback function argument
 // (to indicate what expressions to perform with the values?), and an initial value (e.g 0)
 // the callback function should have the parameters of an accumulator (previousValue), and current value or element
-// ==> can also include entire list and index 
+// ==> can also include entire list and index of each item
 
 /* Example w/ Spotify Wrapped
     * const totalListens = songs.reduce( (acc, song) => { // reduce is a method for arrays/lists
@@ -104,7 +104,7 @@ const contributionsCard = document.getElementById("num-contributions");
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
 
 function addTotalContributors(){
-    let totalContributors = GAMES_JSON.reduce( (accumulator, game, indexValue) => {
+    let totalContributors = GAMES_JSON.reduce( (accumulator, game, indexValue) => { // game is the item in the list
         // displaying the "looping" through the list
         let result = accumulator + game["backers"];
         console.log(`At index ${indexValue}, the accumulated number is ${result}`);
@@ -151,12 +151,24 @@ addTotalGames();
  * Skills used: functions, filter
 */
 
+// Array filter: designed to return a filtered list from an original list, based on a conditional
+// ==> the filter() function only has one parameter, a callback function holding the contitional
+// this is then evaluated for each item in the list ==> if true, included in the returned filtered list
+// NOTE: filter() does not change the original array, rather creates a new one with the original array's filtered items
+
+// similar to other iterative methods belonging to Arrays, the callback function for filter() is formatted as such:
+/*
+    * function callback(currentElement, index, array){
+    * // ...
+    * }
+*/
+
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-
+    
 
     // use the function we previously created to add the unfunded games to the DOM
 
