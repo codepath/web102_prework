@@ -147,6 +147,8 @@ function addTotalGames(){
 addTotalGames();
 
 
+
+
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
  * total number of contributions, amount donated, and number of games on the site.
@@ -246,21 +248,44 @@ allBtn.addEventListener("click", showAllGames)
 
 
 
-// /*************************************************************************************
-//  * Challenge 6: Add more information at the top of the page about the company.
-//  * Skills used: template literals, ternary operator
-// */
+/*************************************************************************************
+ * Challenge 6: Add more information at the top of the page about the company.
+ * Skills used: template literals, ternary operator
+*/
 
-// // grab the description container
-// const descriptionContainer = document.getElementById("description-container");
+// Ternary Operator: these are essentially a consolidation of if else statements --> used a lot in React framework
+// ==> the format is as follows: conditional ? *executed code if true* : *executed code if false*
+// eg) (studentAnswer == 45.35 || studentAnswer == 45. 348) ? console.log("Correct") : console.log("Incorrect")
 
-// // use filter or reduce to count the number of unfunded games
+// grab the description container
+const descriptionContainer = document.getElementById("description-container");
+
+// use filter or reduce to count the number of unfunded games
+
+let numUnfundedGames = GAMES_JSON.reduce((accumulator, game) => {
+    // using ternary operator to return the new value for the accumulator
+    // if the game is unfunded, add 1, if it's not, add nothing
+    return (game["pledged"] < game["goal"]) ? accumulator + 1 : accumulator;
+}, 0);
+
+let totalFunds = addTotalFunds();
+
+console.log(numUnfundedGames) // double check
+
+// create a string that explains the number of unfunded games using the ternary operator
+let descriptionStr = `We have raised a total of $${totalFunds} in funds for ${GAMES_JSON.length}.`
+
+if (numUnfundedGames > 0){
+    descriptionStr += (numUnfundedGames == 1) ? `Currently, just ${numUnfundedGames} game remains unfunded. Donate and help
+     us fund all of these amazing games!` : `Currently, ${numUnfundedGames} game remain unfunded. Donate and help
+     us fund all of these amazing games!`;
+}
+
+console.log(descriptionStr)
 
 
-// // create a string that explains the number of unfunded games using the ternary operator
 
-
-// // create a new DOM element containing the template string and append it to the description container
+// create a new DOM element containing the template string and append it to the description container
 
 // /************************************************************************************
 //  * Challenge 7: Select & display the top 2 games
