@@ -105,7 +105,8 @@ const contributionsCard = document.getElementById("num-contributions");
 
 function addTotalContributors(){
     let totalContributors = GAMES_JSON.reduce( (accumulator, game, indexValue) => { // game is the item in the list
-        // displaying the "looping" through the list
+
+        // demonstrating the iteration through the list in console
         let result = accumulator + game["backers"];
         console.log(`At index ${indexValue}, the accumulated number is ${result}`);
 
@@ -168,9 +169,20 @@ function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-    
+
+    let unfundedGamesList = GAMES_JSON.filter( (game, index) => {
+
+        // demonstrating how the iteration works in console 
+        let isUnfunded = game["pledged"] < game["goal"];
+        console.log(`For item ${index}: ${game["pledged"]} < ${game["goal"]} is ${isUnfunded}`);
+
+        return isUnfunded; // if the game's current funds are less than the the goal funds
+    });
+
+    console.log(unfundedGamesList);
 
     // use the function we previously created to add the unfunded games to the DOM
+    addGamesToPage(unfundedGamesList);
 
 }
 
@@ -198,7 +210,23 @@ const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
+
 // add event listeners with the correct functions to each button
+
+
+// Demonstrating Event Bubbling
+
+// Event bubbling is a concept related to the DOM. Basically, whenever an event is triggered for an element (e.g a button)
+// ==> any event handlers attached to parent elements (all the way to the html roote element) will be 
+// triggered as well (e.g parent div, body, etc) -->this is a default feature and can be changed in the event listener parameters
+
+const buttonContainer = document.getElementById("button-container")
+buttonContainer.addEventListener("click", () => {
+    console.log("The event listener for the button container has been executed. Demonstrating Event Bubbling.")
+});
+
+unfundedBtn.addEventListener("click", filterUnfundedOnly);
+
 
 
 /*************************************************************************************
