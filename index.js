@@ -9,6 +9,7 @@ import GAMES_DATA from './games.js';
 
 // create a list of objects to store the data about the games using JSON.parse
 const GAMES_JSON = JSON.parse(GAMES_DATA)
+console.log(GAMES_JSON)
 
 // remove all child elements from a parent element in the DOM
 function deleteChildElements(parent) {
@@ -46,7 +47,7 @@ function addGamesToPage(games) {
     // loop over each item in the data
     
     for (let i = 0; i < games.length; i++){
-        //console.log(games[i]);
+        console.log(`Adding "${games[i]["name"]}"`);
         
         // create a new div element, which will become the game card
         // add the class game-card to the list
@@ -70,9 +71,9 @@ function addGamesToPage(games) {
 }
 
 // call the function we just defined using the correct variable
+
 addGamesToPage(GAMES_JSON)
 
-// later, we'll call this function using a different list of games
 
 
 /*************************************************************************************
@@ -192,16 +193,30 @@ function filterFundedOnly() {
 
     // use filter() to get a list of games that have met or exceeded their goal
 
+    let fundedGamesList = GAMES_JSON.filter((game) => {
+        return game["pledged"] >= game["goal"];
+    });
 
     // use the function we previously created to add unfunded games to the DOM
 
+    addGamesToPage(fundedGamesList);
 }
 
 // show all games
 function showAllGames() {
+
     deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
+
+    // testing the changed order of objects in the original array 
+    // ==> I believe the unpreserved order has to do with the other challenges' pre-code
+    for(let i = 0; i < GAMES_JSON.length; i++){
+        console.log(GAMES_JSON[i])
+    }
+
+    // unfiltered original list
+    addGamesToPage(GAMES_JSON);
 
 }
 
@@ -226,39 +241,41 @@ buttonContainer.addEventListener("click", () => {
 });
 
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
+fundedBtn.addEventListener("click", filterFundedOnly);
+allBtn.addEventListener("click", showAllGames)
 
 
 
-/*************************************************************************************
- * Challenge 6: Add more information at the top of the page about the company.
- * Skills used: template literals, ternary operator
-*/
+// /*************************************************************************************
+//  * Challenge 6: Add more information at the top of the page about the company.
+//  * Skills used: template literals, ternary operator
+// */
 
-// grab the description container
-const descriptionContainer = document.getElementById("description-container");
+// // grab the description container
+// const descriptionContainer = document.getElementById("description-container");
 
-// use filter or reduce to count the number of unfunded games
-
-
-// create a string that explains the number of unfunded games using the ternary operator
+// // use filter or reduce to count the number of unfunded games
 
 
-// create a new DOM element containing the template string and append it to the description container
+// // create a string that explains the number of unfunded games using the ternary operator
 
-/************************************************************************************
- * Challenge 7: Select & display the top 2 games
- * Skills used: spread operator, destructuring, template literals, sort 
- */
 
-const firstGameContainer = document.getElementById("first-game");
-const secondGameContainer = document.getElementById("second-game");
+// // create a new DOM element containing the template string and append it to the description container
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
-    return item2.pledged - item1.pledged;
-});
+// /************************************************************************************
+//  * Challenge 7: Select & display the top 2 games
+//  * Skills used: spread operator, destructuring, template literals, sort 
+//  */
 
-// use destructuring and the spread operator to grab the first and second games
+// const firstGameContainer = document.getElementById("first-game");
+// const secondGameContainer = document.getElementById("second-game");
 
-// create a new element to hold the name of the top pledge game, then append it to the correct element
+// const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
+//     return item2.pledged - item1.pledged;
+// });
 
-// do the same for the runner up item
+// // use destructuring and the spread operator to grab the first and second games
+
+// // create a new element to hold the name of the top pledge game, then append it to the correct element
+
+// // do the same for the runner up item
