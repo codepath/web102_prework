@@ -54,7 +54,7 @@ function addGamesToPage(games) {
         let gameDiv = document.createElement("div");
         gameDiv.classList.add("game-card");
         gameDiv.innerHTML = ` <img class="game-img" src = "${games[i]["img"]}" /> 
-                                <h2 class="game-title">${games[i]["name"]}</h2>
+                                <h3 class="game-title">${games[i]["name"]}</h3>
                                 <p class="game-about">${games[i]["description"]}</p>`;
 
         // append gameDiv HTML element to the external container in the document

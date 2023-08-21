@@ -10,6 +10,13 @@ body {
 h2{
     text-align: center;
     font-size: 1.75em;
+    margin-top: 55px; /* seperating headings vertically */
+}
+h3{
+    font-size: 1.5em;
+}
+p{
+    font-size: 1.25em;
 }
 
 #tentacles {
@@ -27,13 +34,12 @@ h2{
 }
 
 #description-container{
-   padding: 20px;
-   padding: 20px;
+   padding: 0px 30px;
    text-align: center;
-   font-size: 1.25em;
-   max-width: 1525px;
+   max-width: 1325px;
    margin: 0 auto;
 }
+
 #description-container span{
     font-weight:bold;
     color: lightblue;
@@ -69,6 +75,7 @@ h2{
     text-align: center;
 }
 
+/* adding wrap property to container after screen gets smaller */
 @media screen and (max-width: 750px){
     .stats-container{
         flex-wrap: wrap;
@@ -77,6 +84,10 @@ h2{
 
 #num-contributions, #total-raised, #num-games {
     font-size: 50px;
+}
+
+#games-description{
+
 }
 
 #games-container {
@@ -100,7 +111,7 @@ h2{
     background-color: #FFFFFF;
     padding: 1%;
     margin: 1%;
-    width: 300px;
+    width: 350px;
     text-align: center;
     border-radius: 7px;
 }
@@ -126,11 +137,14 @@ button {
     color: #FFFFFF;
 }
 /* some stylistic modifications for buttons ==> can be improved using JS*/
-button:hover{
+/* button:hover{
     transition: ease-in-out 0.5s;
     cursor: pointer;
     background-color: #FFFFFF;
     color: lightblue;
+} */
+button:hover{
+    cursor: pointer;
 }
 button:focus{
     background-color: #FFFFFF;
