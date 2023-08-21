@@ -17,6 +17,7 @@ h3{
 }
 p{
     font-size: 1.25em;
+    text-align: center;
 }
 
 #tentacles {
@@ -86,15 +87,12 @@ p{
     font-size: 50px;
 }
 
-#games-description{
-
-}
-
 #games-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    padding: 10px 25px;
 }
 
 .game-img {
@@ -129,24 +127,22 @@ p{
 button {
     font-family: 'Cabin';
     border: solid 2.5px #FFFFFF;
-    padding: 1.25%;
-    margin: 1%;
+    /* padding: 1.25%;
+    margin: 1%; */
+    padding: 10px;
+    margin: 2%;
     border-radius: 7px;
     font-size: 1.25em;
     background-color: transparent;
     color: #FFFFFF;
+    transition: ease-in-out 0.5s;  
 }
-/* some stylistic modifications for buttons ==> can be improved using JS*/
-/* button:hover{
-    transition: ease-in-out 0.5s;
-    cursor: pointer;
-    background-color: #FFFFFF;
-    color: lightblue;
-} */
+/* some stylistic modifications for buttons */
 button:hover{
     cursor: pointer;
 }
-button:focus{
+button.selected{
     background-color: #FFFFFF;
     color: lightblue;
+    transform: scale(1.15)
 }

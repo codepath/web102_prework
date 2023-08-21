@@ -75,7 +75,6 @@ function addGamesToPage(games) {
 addGamesToPage(GAMES_JSON)
 
 
-
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
  * total number of contributions, amount donated, and number of games on the site.
@@ -227,6 +226,9 @@ const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
 
+// adding .selected class to button at loading
+allBtn.classList.add("selected")
+
 
 // add event listeners with the correct functions to each button
 
@@ -242,9 +244,36 @@ buttonContainer.addEventListener("click", () => {
     console.log("The event listener for the button container has been executed. Demonstrating Event Bubbling.")
 });
 
-unfundedBtn.addEventListener("click", filterUnfundedOnly);
-fundedBtn.addEventListener("click", filterFundedOnly);
-allBtn.addEventListener("click", showAllGames)
+// adding style modications to buttons
+
+unfundedBtn.addEventListener("click", () => {
+    
+    // removing the selected class from the other two buttons
+    fundedBtn.classList.remove("selected"); // selected changes the css of the current button
+    allBtn.classList.remove("selected");
+
+    // adding selected class to the current button (would the "this" keyword have worked?)
+    unfundedBtn.classList.add("selected");
+    filterUnfundedOnly();
+});
+
+fundedBtn.addEventListener("click", () => {
+    
+    unfundedBtn.classList.remove("selected");
+    allBtn.classList.remove("selected");
+
+    fundedBtn.classList.add("selected");
+    filterFundedOnly();
+});
+
+allBtn.addEventListener("click", () => {
+
+    unfundedBtn.classList.remove("selected");
+    fundedBtn.classList.remove("selected");
+
+    allBtn.classList.add("selected"); // classList already contains this class at the beginning, so this is ignored once
+    showAllGames();
+});
 
 
 
@@ -298,20 +327,57 @@ console.log(descriptionParagraph) // double check
 descriptionContainer.appendChild(descriptionParagraph)
 
 
-// /************************************************************************************
-//  * Challenge 7: Select & display the top 2 games
-//  * Skills used: spread operator, destructuring, template literals, sort 
-//  */
+/************************************************************************************
+ * Challenge 7: Select & display the top 2 games
+ * Skills used: spread operator, destructuring, template literals, sort 
+ */
 
-// const firstGameContainer = document.getElementById("first-game");
-// const secondGameContainer = document.getElementById("second-game");
+const firstGameContainer = document.getElementById("first-game");
+const secondGameContainer = document.getElementById("second-game");
 
-// const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
-//     return item2.pledged - item1.pledged;
-// });
+// Spread Operator: quick way of making copies of an entire array  or parts of it
+// It seems that a spread operator can't be used as a placeholder anywhere before the last item on the list
+// i.e, I can't grab all the elements up to the last two and then grab the other two in a different variable
+// ==> "rest element must be last in destructuring" error
+/*
+    * let [...allOtherGames, lastGame] = GAMES_JSON; // allOtherGames should copy all of the games in GAMES_JSON except the last one
+    * console.log(allOtherGames);
+    * console.log(lastGame); // lastGame should capture final element
+*/
+let array1 = [1, 3, 5, 7, 11, 13]
+let array2 = [...array1, 17, 19, 23] // this makes a copy of the array, while .push() just edits an existing array
+console.log(array2)
 
-// // use destructuring and the spread operator to grab the first and second games
+// Destructuring: a way of unpacking objects or arrays to grab information and put into individual variables
+/*
+    * function getEmployees() {
+    *   return ["Sandra", "Ola", "Chi"];
+    * }
+    * let [a, b, c] = getEmployees(); // ==> a == "Sandra", b == "Ola", c == "Chi"
+*/
 
-// // create a new element to hold the name of the top pledge game, then append it to the correct element
 
-// // do the same for the runner up item
+// Note: I noticed that once this .sort() function is executed, the filter functions seem to rearrange the order of the original 
+// GAMES_JSON array ==> I deduced that this sort() function must not be making a copy of the array and is instead modifying the original
+// ==> using the spread operator "...", a quick copy of te GAMES_JSON array can be made and then sorted so that 
+// other parts of the site aren't affected
+
+const sortedGames =  [... GAMES_JSON].sort( (item1, item2) => {
+    return item2.pledged - item1.pledged; // sorting in order of most pledges to least pledges (funds)
+});
+console.log(sortedGames); // view in console
+
+// combining destructuring and spread operator ==> destructuring only works when there is a variable available for every item in the list
+let [topGame, runnerUpGame, ...remainingGames] = sortedGames;
+
+// create a new element to hold the name of the top 2 pledged games, then append it to the correct element
+
+// using DOM to create elements ==> necessary when there are already elements in the container being modified
+let topGameElement = document.createElement("p");
+topGameElement.innerHTML = topGame["name"];
+firstGameContainer.appendChild(topGameElement);
+
+let runnerUpGameElement = document.createElement("p");
+runnerUpGameElement.innerHTML = runnerUpGame["name"];
+secondGameContainer.appendChild(runnerUpGameElement);
+
