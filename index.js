@@ -373,11 +373,13 @@ let [topGame, runnerUpGame, ...remainingGames] = sortedGames;
 // create a new element to hold the name of the top 2 pledged games, then append it to the correct element
 
 // using DOM to create elements ==> necessary when there are already elements in the container being modified
-let topGameElement = document.createElement("p");
+let topGameElement = document.createElement("h3");
 topGameElement.innerHTML = topGame["name"];
-firstGameContainer.appendChild(topGameElement);
+let topGameImage = document.createElement("img");
+topGameImage.src = topGame["img"];
+firstGameContainer.append(topGameImage, topGameElement);
 
-let runnerUpGameElement = document.createElement("p");
+let runnerUpGameElement = document.createElement("h3");
 runnerUpGameElement.innerHTML = runnerUpGame["name"];
 secondGameContainer.appendChild(runnerUpGameElement);
 

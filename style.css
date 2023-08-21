@@ -28,6 +28,7 @@ p{
     display: flex;
     background-color: lightblue;
     padding: 1%;
+    justify-content: center;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
@@ -57,14 +58,8 @@ p{
     display: flex;
     justify-content: center;
     align-items: stretch; /*default*/
-    border: solid 2.0px lightblue;
-    border-radius: 15.0px;
     margin: 40.0px 15px;
     padding: 20.0px;
-}
-.stats-container:hover{
-    cursor: pointer;
-    box-shadow: 0 0 30px lightblue; /*positioning is centered, blur is 30px*/
 }
 
 .stats-card {
@@ -73,7 +68,21 @@ p{
     padding: 1%;
     margin: 1%;
     width: 100%;
+    max-width: 450px;
     text-align: center;
+    border: solid 2.0px lightblue;
+    border-radius: 15.0px;
+}
+
+.stats-card:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue; /*positioning is centered, blur is 30px*/
+}
+
+.stats-card img{
+    width: 100%;
+    max-width: 350px;
+    height:auto;
 }
 
 /* adding wrap property to container after screen gets smaller */
