@@ -268,24 +268,35 @@ let numUnfundedGames = GAMES_JSON.reduce((accumulator, game) => {
     return (game["pledged"] < game["goal"]) ? accumulator + 1 : accumulator;
 }, 0);
 
-let totalFunds = addTotalFunds();
+// using reduce to find total funds
+let totalFunds = GAMES_JSON.reduce( (accumulator, game) => {
+    return accumulator + game["pledged"]; 
+}, 0).toLocaleString('en-US');
 
 console.log(numUnfundedGames) // double check
 
 // create a string that explains the number of unfunded games using the ternary operator
-let descriptionStr = `We have raised a total of $${totalFunds} in funds for ${GAMES_JSON.length}.`
+let descriptionStr = `We have raised a total of $${totalFunds} in funds for ${GAMES_JSON.length} games. `
 
 if (numUnfundedGames > 0){
-    descriptionStr += (numUnfundedGames == 1) ? `Currently, just ${numUnfundedGames} game remains unfunded. Donate and help
-     us fund all of these amazing games!` : `Currently, ${numUnfundedGames} game remain unfunded. Donate and help
-     us fund all of these amazing games!`;
+    descriptionStr += (numUnfundedGames == 1) ? `<span>Currently, just ${numUnfundedGames} game remains unfunded.</span> 
+    Donate and help us fund all of these amazing games!` : `<span>Currently, ${numUnfundedGames} games remain unfunded.</span>
+    Donate and help us fund all of these amazing games!`;
 }
 
-console.log(descriptionStr)
-
-
+console.log(descriptionStr) // double check
 
 // create a new DOM element containing the template string and append it to the description container
+let descriptionParagraph = document.createElement("p");
+descriptionParagraph.classList.add("description");
+descriptionParagraph.innerHTML = descriptionStr;
+
+console.log(descriptionParagraph) // double check
+
+
+// append to description container
+descriptionContainer.appendChild(descriptionParagraph)
+
 
 // /************************************************************************************
 //  * Challenge 7: Select & display the top 2 games
