@@ -56,12 +56,13 @@ function addGamesToPage(games) {
         gameDiv.innerHTML = ` <img class="game-img" src = "${games[i]["img"]}" /> 
                                 <h3 class="game-title">${games[i]["name"]}</h3>
                                 <p class="game-about">${games[i]["description"]}</p>
-                                <p>${games[i]["backers"]} backers</p>`;
+                                <p class="backers">${games[i]["backers"]} backers</p>`;
         
         // Unfunded alert!
-        if(games[i]["pledged"] < games[i]["goal"]){
+        let need =(games[i]["goal"] -games[i]["pledged"]);
+        if(need > 0){
             let unfundedAlert = document.createElement("p");
-            unfundedAlert.innerHTML = "UNFUNDED";
+            unfundedAlert.innerHTML = `Unfunded! We need $${need.toLocaleString('en-US')} to reach our goal.`;
             unfundedAlert.classList = "unfunded-alert";
             gameDiv.appendChild(unfundedAlert);
         }
@@ -248,7 +249,7 @@ allBtn.classList.add("selected")
 // ==> any event handlers attached to parent elements (all the way to the html roote element) will be 
 // triggered as well (e.g parent div, body, etc) -->this is a default feature and can be changed in the event listener parameters
 
-const buttonContainer = document.getElementById("button-container")
+const buttonContainer = document.getElementById("button-container");
 buttonContainer.addEventListener("click", () => {
     console.log("The event listener for the button container has been executed. Demonstrating Event Bubbling.")
 });
@@ -394,3 +395,73 @@ let runnerUpGameImg = document.createElement("img");
 runnerUpGameImg.src = runnerUpGame["img"];
 secondGameContainer.append(runnerUpGameImg, runnerUpGameElement);
 
+
+/************************************************************************************
+ * EXTRA: Adding search function to filtering (custom keyword search)
+ * ==> In this feature, a user can type in words like "board game" or "hero" and any game object name 
+ * or description containing that word or string will be displayed
+ */
+
+// accessing switch elements ==> giving user the option to switch between the original filter to search filter
+let searchSwitch = document.getElementById("search");
+let fundsSwitch = document.getElementById("funds");
+
+// accessing containers
+let btnContainer = document.getElementById("button-container");
+let searchContainer = document.getElementById("search-container");
+
+let searchInput = document.getElementById("search-input");
+
+searchContainer.style.display = "none"; // when the page loads, the search feature is hidden
+
+// switching between search feature and original filter feature
+searchSwitch.addEventListener("click", () => {
+    btnContainer.style.display = "none";
+    searchContainer.style.display = "flex"; // the search container uses flexbox
+});
+
+fundsSwitch.addEventListener("click", () => {
+    searchContainer.style.display = "none";
+    btnContainer.style.display = "";
+});
+
+function filterBySearch(searchInputVal){
+    console.log(searchInputVal) // double check that the text in the inputfield is being accessed as changed
+
+    searchInputVal = searchInputVal.toLowerCase();
+
+    let searchedGames = GAMES_JSON.filter((game, index) => {
+        // console.log(`index ${index}, game "${game.name}"`)
+
+        // a game will be displayed if it's name or description contains the text input into the inputfield
+        let matchesSearch = (game["name"].toLowerCase()).includes(searchInputVal) || 
+                                (game["description"].toLowerCase()).includes(searchInputVal);
+                                // toLowerCase() is important to accept all input format
+
+        // displaying evaluation of expression 
+        //console.log(`game: ${game.name}: includes ${searchInputVal}? ${matchesSearch}`);
+
+        return matchesSearch;
+    });
+
+    deleteChildElements(gamesContainer);
+
+    // adding a message if there are no results for better UI
+    if(searchedGames.length == 0){
+        let searchPlaceholder = document.createElement("div");
+        searchPlaceholder.classList.add("search-message");
+        searchPlaceholder.innerHTML = "<p>Sorry! No games match your search.</p>"
+        gamesContainer.appendChild(searchPlaceholder);
+    }
+
+    addGamesToPage(searchedGames)
+}
+
+
+searchInput.addEventListener("input", (event) => {
+    // console.log(event) // ==> object that provides data on the event that just occured
+    // ==> in this case, text typed into an input field
+
+    let searchInputVal = searchInput.value;
+    filterBySearch(searchInputVal)
+});

@@ -140,8 +140,11 @@ p{
 }
 .unfunded-alert{
     font-weight: bold;
-    color: red;
+    color: lightblue;
     font-size: 1.5em;
+}
+.backers{
+    font-weight: bold;
 }
 
 #button-container {
@@ -160,7 +163,8 @@ button {
     font-size: 1.35em;
     background-color: transparent;
     color: #FFFFFF;
-    transition: ease-in-out 0.5s;  
+    transition: ease-in-out 0.5s;
+    display: inline;
 }
 /* some stylistic modifications for buttons */
 button:hover{
@@ -169,5 +173,41 @@ button:hover{
 button.selected{
     background-color: #FFFFFF;
     color: lightblue;
-    transform: scale(1.25)
+    transform: scale(1.15)
+}
+
+#search-container{
+    display:flex;
+    align-items:center;
+    flex-direction: column;
+    padding: 25px;
+}
+
+input{
+    width: 275px;
+    max-width: 100%;
+    margin: 10px;
+    padding: 20px 10px;
+    font-size: 1.5em;
+    border-radius: 7px;
+}
+
+.filter-switch{
+    font-size: 1.5em;
+    font-weight:bold;
+    text-decoration: underline;
+}
+.filter-switch:hover{
+    color:lightblue;
+    cursor: pointer;
+}
+
+.search-message{
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: lightblue;
+    font-weight:bold;
+    font-size: 1.5em;
 }
