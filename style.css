@@ -15,8 +15,11 @@ h2{
 h3{
     font-size: 1.5em;
 }
+h4{
+    font-size: 1.35em;
+}
 p{
-    font-size: 1.25em;
+    font-size: 1.20em;
     text-align: center;
 }
 
@@ -74,6 +77,13 @@ p{
     border-radius: 15.0px;
 }
 
+.stats-card h3{
+    text-transform: uppercase;
+}
+.stats-card span{
+    color: lightblue;
+}
+
 .stats-card:hover{
     cursor: pointer;
     box-shadow: 0 0 30px lightblue; /*positioning is centered, blur is 30px*/
@@ -83,6 +93,7 @@ p{
     width: 100%;
     max-width: 350px;
     height:auto;
+    border-radius: 7px;
 }
 
 /* adding wrap property to container after screen gets smaller */
@@ -127,6 +138,11 @@ p{
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
 }
+.unfunded-alert{
+    font-weight: bold;
+    color: red;
+    font-size: 1.5em;
+}
 
 #button-container {
     padding: 15px;
@@ -141,7 +157,7 @@ button {
     padding: 10px;
     margin: 2%;
     border-radius: 7px;
-    font-size: 1.25em;
+    font-size: 1.35em;
     background-color: transparent;
     color: #FFFFFF;
     transition: ease-in-out 0.5s;  
@@ -153,5 +169,5 @@ button:hover{
 button.selected{
     background-color: #FFFFFF;
     color: lightblue;
-    transform: scale(1.15)
+    transform: scale(1.25)
 }

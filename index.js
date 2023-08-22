@@ -55,7 +55,16 @@ function addGamesToPage(games) {
         gameDiv.classList.add("game-card");
         gameDiv.innerHTML = ` <img class="game-img" src = "${games[i]["img"]}" /> 
                                 <h3 class="game-title">${games[i]["name"]}</h3>
-                                <p class="game-about">${games[i]["description"]}</p>`;
+                                <p class="game-about">${games[i]["description"]}</p>
+                                <p>${games[i]["backers"]} backers</p>`;
+        
+        // Unfunded alert!
+        if(games[i]["pledged"] < games[i]["goal"]){
+            let unfundedAlert = document.createElement("p");
+            unfundedAlert.innerHTML = "UNFUNDED";
+            unfundedAlert.classList = "unfunded-alert";
+            gameDiv.appendChild(unfundedAlert);
+        }
 
         // append gameDiv HTML element to the external container in the document
         gamesContainer.appendChild(gameDiv)
@@ -373,13 +382,15 @@ let [topGame, runnerUpGame, ...remainingGames] = sortedGames;
 // create a new element to hold the name of the top 2 pledged games, then append it to the correct element
 
 // using DOM to create elements ==> necessary when there are already elements in the container being modified
-let topGameElement = document.createElement("h3");
-topGameElement.innerHTML = topGame["name"];
+let topGameElement = document.createElement("h4");
+topGameElement.innerHTML = `${topGame["name"]} <span> ($${topGame["pledged"]})</span>`;
 let topGameImage = document.createElement("img");
 topGameImage.src = topGame["img"];
 firstGameContainer.append(topGameImage, topGameElement);
 
-let runnerUpGameElement = document.createElement("h3");
-runnerUpGameElement.innerHTML = runnerUpGame["name"];
-secondGameContainer.appendChild(runnerUpGameElement);
+let runnerUpGameElement = document.createElement("h4");
+runnerUpGameElement.innerHTML = `${runnerUpGame["name"]} <span> ($${runnerUpGame["pledged"]})</span>`;
+let runnerUpGameImg = document.createElement("img");
+runnerUpGameImg.src = runnerUpGame["img"];
+secondGameContainer.append(runnerUpGameImg, runnerUpGameElement);
 
