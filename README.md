@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://i.imgur.com/t36BhBQ.gif' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/t36BhBQ.gif' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap
