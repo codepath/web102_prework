@@ -416,11 +416,31 @@ searchContainer.style.display = "none"; // when the page loads, the search featu
 
 // switching between search feature and original filter feature
 searchSwitch.addEventListener("click", () => {
+
+    // resetting the games displayed to default
+    deleteChildElements(gamesContainer);
+    addGamesToPage(GAMES_JSON); // adding all games back
+    searchInput.value = ""; // clearing search bar
+    // restoring button selection to default
+    unfundedBtn.classList.remove("selected");
+    fundedBtn.classList.remove("selected");
+    allBtn.classList.add("selected");
+
+
     btnContainer.style.display = "none";
     searchContainer.style.display = "flex"; // the search container uses flexbox
 });
 
 fundsSwitch.addEventListener("click", () => {
+    // resetting the games displayed to default
+    deleteChildElements(gamesContainer);
+    addGamesToPage(GAMES_JSON); // adding all games back
+    searchInput.value = ""; // clearing search bar
+    // restoring button selection to default
+    unfundedBtn.classList.remove("selected");
+    fundedBtn.classList.remove("selected");
+    allBtn.classList.add("selected");
+
     searchContainer.style.display = "none";
     btnContainer.style.display = "";
 });
