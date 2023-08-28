@@ -108,3 +108,26 @@ button {
 .nav-list li a:hover {
     color: #61dafb;
 }
+
+.search-bar {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#game-search {
+    padding: 6px;
+    width: 300px;
+}
+
+#search-button {
+    padding: 6px 12px;
+    background-color: #61dafb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #40a9db;
+}

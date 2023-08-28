@@ -119,7 +119,7 @@ function filterFundedOnly() {
 
 // show all games
 function showAllGames() {
-    // deleteChildElements(gamesContainer);
+    deleteChildElements(gamesContainer);
 
     // add all games from the JSON data to the DOM
     addGamesToPage(GAMES_JSON);
@@ -177,3 +177,16 @@ firstGameContainer.appendChild(firstGameNameElement);
 const secondGameNameElement = document.createElement("p");
 secondGameNameElement.innerHTML = secondGame.name;
 secondGameContainer.appendChild(secondGameNameElement);
+
+document.getElementById("search-button").addEventListener("click", function () {
+    const searchTerm = document.getElementById("game-search").value;
+    if (searchTerm) {
+        // use filter() to get a list of games that search term in name
+        let listOfSearchGames = GAMES_JSON.filter ( (game) => {
+            return game.name.toLowerCase().includes(searchTerm);
+          });
+        // display search game
+        deleteChildElements(gamesContainer);
+        addGamesToPage(listOfSearchGames);
+    } else showAllGames();
+});
