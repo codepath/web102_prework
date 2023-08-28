@@ -21,15 +21,26 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 0.5rem; /* Increase padding for more spacing */
+    border-radius: 7px;
+    transition: background-color 0.3s ease;
+}
+
+.stats-container:hover {
+    background-color: #2980b9; /* A darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #ecf0f1; /* A lighter gray */
     border-radius: 7px;
-    padding: 1%;
-    margin: 1%;
+    padding: 1rem;
+    margin: 0.5rem;
     width: 100%;
     text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -72,4 +83,63 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+.main-nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #61dafb;
+}
+
+.search-bar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#game-search {
+    padding: 10px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#search-button:hover {
+    background-color: #2980b9;
 }
