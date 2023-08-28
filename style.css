@@ -79,3 +79,32 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+.main-nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.nav-list {
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #61dafb;
+}
