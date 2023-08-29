@@ -1,6 +1,6 @@
 # WEB102 Prework - *Games Contribution Listing Web App*
 
-Submitted by: **SHADAB HUSSAIN**
+Submitted by: **SHADAB**
 
 **Games Contribution Listing Web App** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
