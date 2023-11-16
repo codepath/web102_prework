@@ -29,6 +29,17 @@ const gamesContainer = document.getElementById("games-container");
 function addGamesToPage(games) {
 
     // loop over each item in the data
+    for (let game of games) {
+        let gameCardDiv = document.createElement("div");
+        gameCardDiv.className = "game-card";
+        gameCardDiv.innerHTML = `
+            <p>Game: ${game.name}</p>
+            <p>Description: ${game.description}</p>
+            <img class="game-img" src=${game.img} />`;
+        var gamesContainerDiv = document.getElementById("games-container");
+        gamesContainerDiv.appendChild(gameCardDiv);
+    }
+
 
 
         // create a new div element, which will become the game card
@@ -49,6 +60,10 @@ function addGamesToPage(games) {
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON)
+let x = 10;
+let y = 4
+console.log("The answer to ${x} + ${y} is ${x + y}");
 
 
 /*************************************************************************************
