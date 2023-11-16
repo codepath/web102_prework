@@ -36,7 +36,7 @@ function addGamesToPage(games) {
             <p>Game: ${game.name}</p>
             <p>Description: ${game.description}</p>
             <img class="game-img" src=${game.img} />`;
-        var gamesContainerDiv = document.getElementById("games-container");
+        const gamesContainerDiv = document.getElementById("games-container");
         gamesContainerDiv.appendChild(gameCardDiv);
     }
 
@@ -61,10 +61,6 @@ function addGamesToPage(games) {
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON)
-let x = 10;
-let y = 4
-console.log("The answer to ${x} + ${y} is ${x + y}");
-
 
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
@@ -72,8 +68,14 @@ console.log("The answer to ${x} + ${y} is ${x + y}");
  * Skills used: arrow functions, reduce, template literals
 */
 
+var games = GAMES_JSON
+
 // grab the contributions card element
 const contributionsCard = document.getElementById("num-contributions");
+const numContributions = games.reduce((backers, game) => {
+    return backers + game.backers;
+}, 0)
+contributionsCard.innerHTML = numContributions.toLocaleString('en-US');
 
 // use reduce() to count the number of total contributions by summing the backers
 
