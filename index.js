@@ -85,13 +85,18 @@ contributionsCard.innerHTML = numContributions.toLocaleString('en-US');
 
 // grab the amount raised card, then use reduce() to find the total amount raised
 const raisedCard = document.getElementById("total-raised");
+const numPledged = games.reduce((pledged, game) => {
+    return pledged + game.pledged;
+}, 0)
+raisedCard.innerHTML = numPledged.toLocaleString('en-US')
 
 // set inner HTML using template literal
 
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
-
+const numGames = Object.keys(games).length;
+gamesCard.innerHTML = numGames
 
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
