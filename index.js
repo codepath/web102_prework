@@ -190,3 +190,25 @@ firstGameContainer.appendChild(firstPlace);
 const secondPlace = document.createElement("p");
 secondPlace.innerHTML = `${second.name}`;
 secondGameContainer.appendChild(secondPlace);
+
+/************************************************************************************
+ * Search Bar
+ * Skills used: filter
+ */
+document.getElementById("search").addEventListener('keyup', (e) => {
+    const searchData = e.target.value.toLowerCase();
+    
+    // Display all games if the search is empty
+    if (!searchData.trim()) {
+        // Prevent duplcates from appearing
+        gamesContainer.innerHTML = '';
+        addGamesToPage(GAMES_JSON);
+    } else {
+        const searchedGames = GAMES_JSON.filter((game) => {
+            let lowercaseGameName = game.name.toLowerCase();
+            return lowercaseGameName.includes(searchData);
+        });
+        gamesContainer.innerHTML = '';
+        addGamesToPage(searchedGames);
+    }
+});

@@ -83,3 +83,18 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
+input {
+    font-family: 'Cabin';
+    font-size: large;
+    width: 25%;
+    margin: 1%;
+    padding: 1%;
+    border: none;
+    border-radius: 7px;
+}
