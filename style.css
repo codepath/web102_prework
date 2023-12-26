@@ -5,6 +5,10 @@ body {
     background-color: #758190;
 }
 
+h2, h3, p {
+    text-align: center;
+}
+
 #tentacles {
     width: 50px;
 }
@@ -21,6 +25,12 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: flex-end;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30 lightblue;
 }
 
 .stats-card {
@@ -60,6 +70,13 @@ body {
 .game-card:hover {
     cursor: pointer;
     box-shadow: 0 0 30px lightblue;
+    font-weight: bolder;
+}
+
+#unfunded-btn:hover, #funded-btn:hover, #all-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+    font-weight: bolder;
 }
 
 #button-container {
