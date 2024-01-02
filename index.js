@@ -74,10 +74,10 @@ const totalContributions = GAMES_JSON.reduce((total,cbts) => {
 
 // set the inner HTML using a template literal and toLocaleString to get a number with commas
 
-contributionsCard.innerHTML = `<h3>Total Contributors:${totalContributions.toLocaleString()}</h3>`;
+contributionsCard.innerHTML = `<h3>Total Contributors: ${totalContributions.toLocaleString()}</h3>`;
 
 // grab the amount raised card, then use reduce() to find the total amount raised
-const raisedCard = document.getElementById("total-raised");
+const raisedCard = document.getElementById("total-raised"); 
 
 const totalRaised = GAMES_JSON.reduce((total, raised) => {
     return total+raised.pledged
@@ -94,9 +94,10 @@ const totalGames = GAMES_JSON.reduce((total) => {
     return total + 1
 },0)
 
-console.log(totalGames);
+
 
 gamesCard.innerHTML = `<h3>Total Number of Games: ${totalGames.toLocaleString()}</h3>`
+
 /*************************************************************************************
  * Challenge 5: Add functions to filter the funded and unfunded games
  * total number of contributions, amount donated, and number of games on the site.
@@ -109,8 +110,11 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
 
+const checkUnderFunded = GAMES_JSON.filter(game => game.pledged < game.goal);
+console.log(checkUnderFunded);
 
     // use the function we previously created to add the unfunded games to the DOM
+
 
 }
 
