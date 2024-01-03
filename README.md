@@ -1,8 +1,8 @@
-# WEB102 Prework - *SMC GAME HUB*
+# WEB102 Prework - *SMC GAMES FUNDING*
 
 Submitted by: **Mohammed Nazib Hossain Khan**
 
-**SMC GAME HUB** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**SMC GAMES FUNDING** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
 Time spent: **X** hours spent in total
 
