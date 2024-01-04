@@ -4,6 +4,13 @@ html{
     scroll-behavior: smooth;
 }
 
+.icon {
+    border-radius: 50px;
+    border: solid 1px #aaa;
+    box-shadow: 0 0 0 4px orange, 0 0 0 5px #aaa;
+    margin: 10px;
+}
+
 nav {
     margin-right: 20px;
 }
