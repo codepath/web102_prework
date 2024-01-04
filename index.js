@@ -85,7 +85,7 @@ const totalRaised = GAMES_JSON.reduce((total, raised) => {
 
 // set inner HTML using template literal
 
-raisedCard.innerHTML = `<h3>Total Raised: ${totalRaised.toLocaleString()} </h3>`;
+raisedCard.innerHTML = `<h3>Total Raised: $${totalRaised.toLocaleString()} </h3>`;
 
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
@@ -93,8 +93,6 @@ const gamesCard = document.getElementById("num-games");
 const totalGames = GAMES_JSON.reduce((total) => {
     return total + 1
 },0)
-
-
 
 gamesCard.innerHTML = `<h3>Total Number of Games: ${totalGames.toLocaleString()}</h3>`
 
@@ -156,8 +154,6 @@ const descriptionContainer = document.getElementById("description-container");
 // use filter or reduce to count the number of unfunded games
 const unfundedGamesCount = GAMES_JSON.filter(game => game.pledged < game.goal).length;
 
-gamesCard.innerHTML = `<h3>Total Number of Games: ${totalGames.toLocaleString()}</h3>`
-
 // create a string that explains the number of unfunded games using the ternary operator
 
 const raisedStatement = (unfundedGamesCount === 0)
@@ -183,9 +179,28 @@ const secondGameContainer = document.getElementById("second-game");
 const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
     return item2.pledged - item1.pledged;
 });
+console.log(sortedGames);
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame] = sortedGames;
 
-// create a new element to hold the name of the top pledge game, then append it to the correct element
+// Creating elements to display the top 2 games
+const firstGameElement = document.createElement("div");
+firstGameElement.innerHTML = `
+    <img src="${firstGame.img}" alt="${firstGame.name}" class="game-img">
+    <h3>${firstGame.name}</h3>
+    <p>Pledged: $${firstGame.pledged.toLocaleString()}</p>
+    <p>Goal: $${firstGame.goal.toLocaleString()}</p>
+`;
 
-// do the same for the runner up item
+const secondGameElement = document.createElement("div");
+secondGameElement.innerHTML = `
+    <img src="${secondGame.img}" alt="${secondGame.name}" class="game-img">
+    <h3>${secondGame.name}</h3>
+    <p>Pledged: $${secondGame.pledged.toLocaleString()}</p>
+    <p>Goal: $${secondGame.goal.toLocaleString()}</p>
+`;
+
+// Appending the elements to the corresponding containers
+firstGameContainer.appendChild(firstGameElement);
+secondGameContainer.appendChild(secondGameElement);
