@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 20px;
+    font-family: 'Cabin';
+}
+
+nav a:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightblue;
+}
+
+
 .header-text1 {
     color: orange;
 }
@@ -114,6 +136,6 @@ button {
 
 button:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 10px lightblue;
 }
 
