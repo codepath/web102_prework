@@ -1,30 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
 
+html{
+    scroll-behavior: smooth;
+}
+
+.icon {
+    border-radius: 50px;
+    border: solid 1px #aaa;
+    box-shadow: 0 0 0 4px orange, 0 0 0 5px #aaa;
+    margin: 10px;
+}
+
+nav {
+    margin-right: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 30px; 
+    font-size: 20px;
+    font-family: 'Cabin';
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+
+.header-text1 {
+    color: orange;
+}
+
+.header-text2 {
+    color: white;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: #36454F;
 }
 
 #tentacles {
     width: 50px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .header {
     display: flex;
-    background-color: lightblue;
-    padding: 1%;
     align-items: center;
+    background-color: rgb(14, 66, 83);
+    padding: 1%;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    
+}
+
+.header#tentacles {
+    padding: 30px orange;
+    border-radius: 30px orange;
 }
 
 .stats-container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue; 
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: #323232;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
@@ -45,11 +111,11 @@ body {
 .game-img {
     width: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 10px #FFFFFF;
+    box-shadow: 0 0 10px orange;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: #323232;
     padding: 1%;
     margin: 1%;
     width: 300px;
@@ -64,12 +130,19 @@ body {
 
 #button-container {
     text-align: center;
+    height: 70px;
 }
 
 button {
     font-family: 'Cabin';
-    border: none;
+    height: 50px;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
 }
+
+button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px lightblue;
+}
+
