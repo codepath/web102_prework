@@ -43,20 +43,21 @@ function addGamesToPage(games) {
         // between the end of the src attribute and the end of the tag ("/>")
         gameCard.innerHTML = `
             <!-- Template for game card -->
-            <img src="${game.image}" alt="${game.title}" class="game-img" />
-            <h2>${game.title}</h2>
+            <img src="${game.img}" alt="${game.name}" class="game-img" />
+            <h2>${game.name}</h2>
             <p>Goal: $${game.goal.toLocaleString()}</p>
             <p>Pledged: $${game.pledged.toLocaleString()}</p>
         `;
 
+
         // append the game to the games-container
         gamesContainer.appendChild(gameCard);
+    }
 }
-
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
 addGamesToPage(GAMES_JSON);
-}
+
 /*************************************************************************************
  * Challenge 4: Create the summary statistics at the top of the page displaying the
  * total number of contributions, amount donated, and number of games on the site.
