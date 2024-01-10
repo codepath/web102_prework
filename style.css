@@ -21,6 +21,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center; /*align all child items vertically*/
+    background-color: pink; /*new rule! */
+}
+
+.stats-container:hover {
+    cursor: pointer; 
+    box-shadow: 0 0 30px lightblue; 
 }
 
 .stats-card {
@@ -72,4 +79,10 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    background-color: rgb(252, 209, 216); 
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: lightpink; /* Darker green background on hover */
 }
