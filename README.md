@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='https://imgur.com/a/JqKUbMd' title='Pre Work - Ahmed Hejazi Kilani' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/JqKUbMd' title='Pre Work - Ahmed Hejazi Kilani' width='25' alt='Video Walkthrough' />
 
 
 GIF created with ... ScreenToGif 
