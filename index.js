@@ -46,9 +46,9 @@ function addGamesToPage(games) {
               <h2>${currGame.name}</h2>
               <p>${currGame.description}</p>
               <h3>Pledged</h3>
-              <p>$${currGame.pledged}</p>
+              <p>$${currGame.pledged.toLocaleString('en-US')}</p>
               <h3>Goal</h3>
-              <p>$${currGame.goal}</p>
+              <p>$${currGame.goal.toLocaleString('en-US')}</p>
         `;
         // append the game to the games-container
 	gamesContainer.appendChild(game)
