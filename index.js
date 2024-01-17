@@ -32,7 +32,6 @@ function addGamesToPage(games) {
     for (let i = 0; i < games.length; i++) {
 
 
-	console.log(`iteration ${i}`)
         // create a new div element, which will become the game card
 	let game = document.createElement(`div`);
         // add the class game-card to the list
