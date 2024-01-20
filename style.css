@@ -45,8 +45,10 @@ body {
 
 #games-container {
     display: flex;
+    gap: 10px ;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    
 }
 
 .game-img {
