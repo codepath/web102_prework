@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-
+[![Watch the video](https://i.stack.imgur.com/Vp2cE.png)](https://drive.google.com/file/d/1Oa10l9GQO9PNKV7gfMd7RY9IDyu9XWh7/)
 <img src='https://drive.google.com/file/d/1Oa10l9GQO9PNKV7gfMd7RY9IDyu9XWh7/' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
