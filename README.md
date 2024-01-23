@@ -22,7 +22,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
-[![Watch the video](https://www.bing.com/images/search?view=detailV2&ccid=qWjjBMk%2f&id=DADDA7ED4563685C4AF7266D7487F8BF868230BF&thid=OIP.qWjjBMk_uNLWWj3fs8PLyQAAAA&mediaurl=https%3a%2f%2fwww.tamiu.edu%2fdistance%2fimages%2fwatch-video.png&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.a968e304c93fb8d2d65a3ddfb3c3cbc9%3frik%3dvzCChr%252f4h3RtJg%26pid%3dImgRaw%26r%3d0&exph=256&expw=256&q=watch+my+video.png&simid=608051495856004716&FORM=IRPRST&ck=D1B9F342F22C88FAAC15A2D9F73DEF18&selectedIndex=19&itb=1)](https://drive.google.com/file/d/1Oa10l9GQO9PNKV7gfMd7RY9IDyu9XWh7/)
+[![Watch the video](https://www.nicepng.com/png/full/22-225492_watch-video-button-animated.png)](https://drive.google.com/file/d/1Oa10l9GQO9PNKV7gfMd7RY9IDyu9XWh7/)
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
