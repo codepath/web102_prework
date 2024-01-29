@@ -27,7 +27,6 @@ Here's a walkthrough of implemented features:
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
-<!-- Recommended tools:
 [ScreenToGif](https://www.screentogif.com/) for Windows
 
 
