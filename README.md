@@ -28,6 +28,9 @@ Here's a walkthrough of implemented features:
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with Kap  
 
+##Challenges
+I tried, but I was not able to add the Walkthrough gif here. Adding my code here was a real confusing struggle the link provided to the tutorial is not working.
+
 
 ## License
 
