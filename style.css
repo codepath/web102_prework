@@ -21,6 +21,7 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
 }
 
 .stats-card {
@@ -73,3 +74,13 @@ button {
     margin: 1%;
     border-radius: 7px;
 }
+
+.stats-containers {
+    display: flex; 
+    align-items: center;
+  }
+  
+  .stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+  }
