@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 Here's a quick overview of implemented features.
 [ vedio demo ] ( https://youtu.be/41bkDD7J5ec)
-GIF created with LICECap 
+Quick Time player created 
 ## Notes
 
 * Responsive user interface while managing the display of games based on funding status required careful coding and 
