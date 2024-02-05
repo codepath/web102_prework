@@ -27,15 +27,15 @@ Here's a walkthrough of implemented features:
 <img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ...  Getkapp.com
 <!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+[Kap](https://getkap.co/) for macOS. -->
 
+GIF created with LICECap 
 ## Notes
 
-Responsive user interface while managing the display of games based on funding status required careful coding and testing across various devices and browsers..
+* Responsive user interface while managing the display of games based on funding status required careful coding and 
+* testing across various devices and browsers..
 
 ## License
 
