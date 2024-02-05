@@ -22,6 +22,7 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
+![gif walkthrough ](web102.gif)
 
 <img src='http://i.imgur.com/' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
