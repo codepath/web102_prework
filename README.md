@@ -26,7 +26,7 @@ Here's a walkthrough of implemented features:
 <img src='https://imgur.com/a/yi0sX6F' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with imgur, screen recorded using macOS screan recording. 
+GIF created with Kap
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -35,6 +35,8 @@ GIF created with imgur, screen recorded using macOS screan recording.
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+The most challenging hurdle was allocating time to sit down and complete the assignment. However, once I found both the time and motivation, I was able to finish it promptly.
 
 ## License
 
