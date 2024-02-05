@@ -180,12 +180,7 @@ allBtn.classList.add("selected")
 
 // add event listeners with the correct functions to each button
 
-
-// Demonstrating Event Bubbling
-
-// Event bubbling is a concept related to the DOM. Basically, whenever an event is triggered for an element (e.g a button)
-// ==> any event handlers attached to parent elements (all the way to the html roote element) will be 
-// triggered as well (e.g parent div, body, etc) -->this is a default feature and can be changed in the event listener parameters
+// add event listener for the button container  element being clicked
 
 const buttonContainer = document.getElementById("button-container");
 buttonContainer.addEventListener("click", () => {
@@ -232,9 +227,8 @@ allBtn.addEventListener("click", () => {
  * Skills used: template literals, ternary operator
 */
 
-// Ternary Operator: these are essentially a consolidation of if else statements --> used a lot in React framework
-// ==> the format is as follows: conditional ? *executed code if true* : *executed code if false*
-// eg) (studentAnswer == 45.35 || studentAnswer == 45. 348) ? console.log("Correct") : console.log("Incorrect")
+// grab the title container
+
 
 // grab the description container
 const descriptionContainer = document.getElementById("description-container");
@@ -247,7 +241,7 @@ let numUnfundedGames = GAMES_JSON.reduce((accumulator, game) => {
     return (game["pledged"] < game["goal"]) ? accumulator + 1 : accumulator;
 }, 0);
 
-// using reduce to find total funds
+// using template literals to create a string that explains the number of unfunded games
 let totalFunds = GAMES_JSON.reduce( (accumulator, game) => {
     return accumulator + game["pledged"]; 
 }, 0).toLocaleString('en-US');
@@ -285,32 +279,17 @@ descriptionContainer.appendChild(descriptionParagraph)
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-// Spread Operator: quick way of making copies of an entire array  or parts of it
-// It seems that a spread operator can't be used as a placeholder anywhere before the last item on the list
-// i.e, I can't grab all the elements up to the last two and then grab the other two in a different variable
-// ==> "rest element must be last in destructuring" error
-/*
-    * let [...allOtherGames, lastGame] = GAMES_JSON; // allOtherGames should copy all of the games in GAMES_JSON except the last one
-    * console.log(allOtherGames);
-    * console.log(lastGame); // lastGame should capture final element
-*/
+// spread operator and destructuring functions are used to select the games that are selected by the user and destructuring
+
 let array1 = [1, 3, 5, 7, 11, 13]
 let array2 = [...array1, 17, 19, 23] // this makes a copy of the array, while .push() just edits an existing array
 console.log(array2)
 
-// Destructuring: a way of unpacking objects or arrays to grab information and put into individual variables
-/*
-    * function getEmployees() {
-    *   return ["Sandra", "Ola", "Chi"];
-    * }
-    * let [a, b, c] = getEmployees(); // ==> a == "Sandra", b == "Ola", c == "Chi"
-*/
 
-
-// Note: I noticed that once this .sort() function is executed, the filter functions seem to rearrange the order of the original 
-// GAMES_JSON array ==> I deduced that this sort() function must not be making a copy of the array and is instead modifying the original
-// ==> using the spread operator "...", a quick copy of te GAMES_JSON array can be made and then sorted so that 
-// other parts of the site aren't affected
+// Observation: Executing the .sort() function appears to alter the sequence of the GAMES_JSON array, 
+// suggesting that the sort operation modifies the array directly rather than creating a duplicate. 
+// To circumvent this and preserve the original array's order for other site functionalities, 
+// employing the spread operator "..." to clone the GAMES_JSON array before sorting is a practical solution.
 
 const sortedGames =  [... GAMES_JSON].sort( (item1, item2) => {
     return item2.pledged - item1.pledged; // sorting in order of most pledges to least pledges (funds)
@@ -336,10 +315,10 @@ runnerUpGameImg.src = runnerUpGame["img"];
 secondGameContainer.append(runnerUpGameImg, runnerUpGameElement);
 
 
-/************************************************************************************
- * EXTRA: Adding search function to filtering (custom keyword search)
- * ==> In this feature, a user can type in words like "board game" or "hero" and any game object name 
- * or description containing that word or string will be displayed
+/**********************************************************************************
+ * Enhancement: Incorporating a search capability into the filtering process
+ * This functionality allows users to input terms such as "board game" or "hero", 
+ * and any game objects with names or descriptions that include those terms will be shown.
  */
 
 // accessing switch elements ==> giving user the option to switch between the original filter to search filter
