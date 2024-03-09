@@ -36,16 +36,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
 .card-content {
   font-size: 18px;
   text-align: center;
+  transform-style: preserve-3d;
 }
 
 .card.flipped {
   transform: rotateY(180deg);
+  text-transform: rotateY(180deg);
+  background-color: #f38ccb;
 }
 
 button {
