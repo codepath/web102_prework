@@ -5,7 +5,7 @@ import CardList from './components/CardList';
 function App() {
   return (
     <div className="App">
-      <h1>Flashcards App</h1>
+      <h1>Study Flashcards</h1>
       <CardList />
     </div>
   );
