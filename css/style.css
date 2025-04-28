@@ -5,6 +5,13 @@ body {
     background-color: #758190;
 }
 
+*{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
 #tentacles {
     width: 50px;
 }
@@ -21,6 +28,14 @@ body {
 
 .stats-container {
     display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    cursor: pointer;
+    box-shadow: 0 0 30px;
+}
+
+.stats-container:hover {
+    color: lightblue;
 }
 
 .stats-card {
@@ -32,7 +47,9 @@ body {
     text-align: center;
 }
 
-#num-contributions, #total-raised, #num-games {
+#num-contributions,
+#total-raised,
+#num-games {
     font-size: 50px;
 }
 
@@ -72,4 +89,30 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+img{
+    width: 50%;
+
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: fit-content;
+}
+
+table,
+tr,
+td,
+th,
+tbody,
+thead {
+    border: 1px solid black;
+    text-align: center;
+}
+
+thead th {
+    /* background-color: rgba(26, 26, 27, 0.301); */
+    color: white;
 }

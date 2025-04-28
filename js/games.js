@@ -1,9 +1,20 @@
 // Image credits: Kickstarter
+
+/*
+ * Pledged- Holds a dollar amount referring to the
+            amount of money backers have donated to
+            the game.
+
+  * backers- Holds a number referring to the
+            number of unique people who have
+            donated to fund a game.
+*/
+
 const games = ` [
   {
     "name": "Heroes Of Mythic Americas",
     "description": "An exciting 5e RPG supplement that heroically represents pre-Columbian American cultures and mythologies",
-    "pledged": 1572,
+    "pledged": 1572, 
     "goal": 10000,
     "backers": 9,
     "img": "./assets/heroes_of_mythic_americas.png"
@@ -89,7 +100,7 @@ const games = ` [
     "img": "./assets/kingdom_death.png"
   }
 ]
-`
+`;
 const template = `
 {
 "name": "",
@@ -99,6 +110,6 @@ const template = `
 "backers": 0,
 "img": ""
 },
-`
+`;
 
 export default games;
