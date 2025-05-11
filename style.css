@@ -80,3 +80,16 @@ button {
     border-radius: 7px;
     cursor: pointer;
 }
+
+.progress{
+    width: 100%;
+    background-color: lightgrey;   
+    border-radius: 5px;
+}
+
+.bar{
+    line-height: 30px;
+    text-align: center;
+    background-color: rgb(0, 235, 4);
+    border-radius: inherit;
+}

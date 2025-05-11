@@ -31,17 +31,27 @@ function addGamesToPage(games) {
     // loop over each item in the data
     for (let i = 0; i < games.length; i++) {
         const newGameCard = document.createElement("div");
+        const div = moveProgress(games[i].pledged, games[i].goal)
         const innerContent = `
             <h2> Name: ${games[i].name} </h2>
             <img class="game-img" src="${games[i].img}"/>
             <h3> Description: ${games[i].description}</h3>
             <h3> Total Pledged: ${games[i].pledged} </h3>
             <h3> Goal: ${games[i].goal} </h3>
-        `;
+            ${div}
+            `
         newGameCard.innerHTML = innerContent;
         newGameCard.classList.add("game-card");
 
         gamesContainer.appendChild(newGameCard)
+    }
+    function moveProgress(pledge, goal){
+        let percentage = ((pledge/goal*100) >= 100)? 100 : parseInt((pledge/goal*100));
+        return `
+        <div class="progress">
+            <div class="bar" style="width: ${percentage}%">${percentage}%</div>
+        </div>
+        `
     }
 
 
@@ -201,3 +211,4 @@ secondGameContainer.append(createNewElement(second.name));
 // create a new element to hold the name of the top pledge game, then append it to the correct element
 
 // do the same for the runner up item
+
