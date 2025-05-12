@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color:  #FFFBDE; /*#758190 is a grayish color*/
 }
 
 #tentacles {
@@ -11,7 +11,7 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: #90D1CA;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
@@ -21,7 +21,13 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center; /* centers items vertically within the row */
 }
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 40px #096B68;
+  }
 
 .stats-card {
     background-color: #a8b0bc;
@@ -59,7 +65,7 @@ body {
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 40px #096B68;
 }
 
 #button-container {
@@ -69,7 +75,31 @@ body {
 button {
     font-family: 'Cabin';
     border: none;
-    padding: 1%;
-    margin: 1%;
+    padding: 10px 20px;
+    margin: 10px;
     border-radius: 7px;
+    background-color: #096B68;
+    color: white;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
+
+button:hover {
+    background-color: #129990;
+    cursor: pointer;
+}
+  
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer {
+    background-color: #90D1CA;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+  }
