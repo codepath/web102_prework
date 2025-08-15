@@ -21,6 +21,12 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -72,4 +78,21 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+#searchInput {
+  padding: 8px;
+  width: 250px;
+}
+
+#searchButton {
+  padding: 8px 12px;
+}
+
+.hidden {
+  display: none;
 }
