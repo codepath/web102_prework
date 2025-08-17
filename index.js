@@ -141,35 +141,30 @@ function filterFundedOnly(games) {
 // show all games
 
 
-showAllGames(GAMES_JSON)
+
 function showAllGames(games) {
-    deleteChildElements(gamesContainer);
-    addGamesToPage(games);
+    deleteChildElements(gamesContainer); // clear old games
+    addGamesToPage(games);               // render new games
 }
 
-
-// select each button in the "Our Games" section
-
-
-// add event listeners with the correct functions to each button
+// Button event listeners
 const unfunded_btn = document.getElementById("unfunded-btn")
+
 unfunded_btn.addEventListener("click",()=>{
     deleteChildElements(gamesContainer);
-    addGamesToPage(filterUnfundedOnly(GAMES_JSON))
- }
-)
+    showAllGames(filterUnfundedOnly(GAMES_JSON));
+})
+const funded_btn = document.getElementById("funded-btn")
 
- const funded_btn = document.getElementById("funded-btn");
 
- funded_btn.addEventListener("click",()=>{
+funded_btn.addEventListener("click",()=>{
     deleteChildElements(gamesContainer);
-    addGamesToPage(filterFundedOnly(GAMES_JSON))
-    
- })
+    showAllGames(filterFundedOnly(GAMES_JSON));
+})
 const all_btn = document.getElementById("all-btn")
 all_btn.addEventListener("click",()=>{
-    deleteChildElements(gamesContainer);
-showAllGames(GAMES_JSON)
+   
+    showAllGames(GAMES_JSON);
 })
 
 
@@ -273,27 +268,13 @@ function searchGame() {
     }
 }
 
-const searchForm = document.querySelector('.search-container');
 searchBar.addEventListener("keydown",(e)=>{
     if (e.key == "Enter"){
         e.preventDefault()
-        searchGame()
+        searchGame(searchBar.value.toLowerCase())
     }
 })
-document.addEventListener('click', function (event) {
-  // check if click happened outside games container AND outside search form
-  if (
-    !gamesContainer.contains(event.target) &&
-    !searchForm.contains(event.target)
-  ) {
-    // remove blur
-    gamesContainer.classList.remove('blurred');
 
-    // reset games
-    deleteChildElements(gamesContainer);
-    addGamesToPage(GAMES_JSON);
-  }
-});
 
 
 // Mobile menu toggle
