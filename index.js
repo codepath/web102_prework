@@ -115,17 +115,10 @@ function filterUnfundedOnly(games) {
     return games.filter(game => game.pledged < game.goal);
 }
 
-
-
-
-
 // console.log(filterUnfundedOnly(GAMES_JSON));
-
 
 // show only games that are fully funded
 function filterFundedOnly(games) {
-    
-
     // use filter() to get a list of games that have met or exceeded their goal
     return games.filter(game => game.pledged >= game.goal);
   }
