@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>GamesFunded</title>
   </head>
 
   <body>
     <!-- header row with logo -->
+    <!-- Navigation Bar -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <a href="#home" class="logo">Sea Monster</a>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#our-games" class="active">Our Games</a></li>
+
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+
+      <li>
+        <form class="search-container">
+          <input type="text" id="search-bar" placeholder="Search.." name="search">
+          <button type="button" id="search-btn">🔍</button>
+        </form>
+      </li>
+    </ul>
+
+    <!-- Mobile Menu Button -->
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+</nav>
+
+
     <div class="header">
         <img id="tentacles" src="assets/tentacles.png">
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
@@ -48,13 +76,14 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
+    <h2 id="our-games">Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>
         <button id="funded-btn">Show Funded Only</button>
         <button id="all-btn">Show All Games</button>
     </div>
+    <div id="search-result"></div>
     <div id="games-container">
 
     </div>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
-
+html{
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Cabin';
     background-color: #758190;
@@ -21,6 +23,16 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: flex-start;
+    
+    
+
+}
+.stats-container:hover{
+    cursor: pointer;
+    box-shadow:  0 0 30px lightblue;
+    
+
 }
 
 .stats-card {
@@ -72,4 +84,120 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav.navbar {
+  background: #1e1e2f;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00d4ff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #00d4ff;
+}
+
+/* Search */
+.search-container {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.search-container input {
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  border: none;
+}
+
+.search-container button {
+  padding: 0.3rem 0.6rem;
+  border: none;
+  background: #00d4ff;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.search-container button:hover {
+  background: #00aacc;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e1e2f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.blurred {
+  filter: blur(4px);
+  opacity: 0.4;
+  transition: 0.3s;
+  cursor: pointer;
 }
