@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width">
+    <!-- added fonts using awesome fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
 
@@ -13,15 +15,27 @@
         <h1 class="header-text">Sea Monster Crowdfunding</h1>
     </div>
 
+    <!-- navbar right under the logo -->
+    <div class="topnav">
+        <a href="#about-us" id="nav-about-us">About Us</a>
+        <a href="#stats" id="nav-stats">Stats</a>
+        <a href="#games" id="nav-our-games">Our Games</a>
+        <div class="search-container">
+            <input type="text" placeholder="Search our games" name="search" id="search">
+            <button id= "search-btn" type="submit"><i class="fa fa-search fa-regular"></i></button>
+        </div>
+        
+    </div>
+
     <!-- background info about company -->
-    <h2>Welcome to Sea Monster!</h2>
+    <h2 id="about-us">Welcome to Sea Monster!</h2>
     <div id="description-container">
         <p>The purpose of our company is to fund independent games. We've been in operation for 12 years.</p>
     </div>
 
     <!-- top games & other interesting stats -->
-    <h2>Stats</h2>
-    <div class="stats-container">
+    <h2 id="stats">Stats</h2>
+    <div class="stats-container" >
         <div class="stats-card">
             <h3>Individual Contributions</h3>
             <p id="num-contributions">
@@ -48,7 +62,7 @@
     </div>
 
     <!-- list of games funded by Sea Monster -->
-    <h2>Our Games</h2>
+    <h2 id="games">Our Games</h2>
     <p>Check out each of our games below!</p>
     <div id="button-container">
         <button id="unfunded-btn">Show Unfunded Only</button>

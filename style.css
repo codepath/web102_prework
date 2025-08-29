@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 
 body {
-    font-family: 'Cabin';
+    font-family: "Hanken Grotesk", sans-serif;
     background-color: #758190;
+
 }
 
 #tentacles {
@@ -10,6 +15,7 @@ body {
 }
 
 .header {
+    position: sticky;
     display: flex;
     background-color: lightblue;
     padding: 1%;
@@ -19,8 +25,101 @@ body {
     margin-top: -10px;
 }
 
+.topnav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(2, 60, 79);
+    padding: 1%;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+}
+
+.topnav a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  margin-left: auto;
+  background:rgba(181, 222, 236, 0.6);
+  width: 25%;
+  min-width: 25%;
+  padding: 5px 5px;
+  border-radius: 7px;
+  
+}
+
+.search-container input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 5px 70px 5px 10px;
+    font-size: 17px;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+::placeholder{
+    color:#FFFFFF;
+}
+
+.search-container button {
+    border: 0;
+    background: transparent;
+    color: #FFFFFF;
+    border-radius: 7px;
+    padding: 6px 6px;
+    font-size: 17px;
+}
+.search-container button:hover{
+    cursor: pointer;
+}
+
+.search-highlight{
+    background-color: #ffeb3b;
+    border: 2px solid #ff9800;
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.4);
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1s ease-in-out 2;
+}
+
+.fade-out{
+    background-color: transparent;
+    border: 2px solid transparent;
+    box-shadow: none;
+    transform: scale(1);
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes pulse{
+    0% {transform: scale(1.02);}
+    50% {transform: scale(1.05);}
+    100% {transform: scale(1.02);}
+}
+
+
 .stats-container {
     display: flex;
+    align-items: center;
 }
 
 .stats-card {
@@ -30,6 +129,10 @@ body {
     margin: 1%;
     width: 100%;
     text-align: center;
+}
+.stats-card:hover{
+    cursor: pointer;
+    box-shadow:  0 0 30px lightblue;
 }
 
 #num-contributions, #total-raised, #num-games {
