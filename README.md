@@ -1,10 +1,10 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster*
 
-Submitted by: **Your Name Here**
+Submitted by: **Mizbah Ateeq**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **6** hours spent in total
 
 ## Required Features
 
@@ -23,10 +23,11 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[https://youtu.be/2wzh5arSTCs](https://youtu.be/zzgUASfiA58)
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+Video created with MacOS Screen Recording Tool + YouTube Upload
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -36,9 +37,11 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
+I had trouble getting the unfunded and funded buttons to work and making sure to filter them out properly. Also, using new tools like reduce and filter is something I'm still adjusting to and fully grasping. 
+
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [Mizbah Ateeq]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
