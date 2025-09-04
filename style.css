@@ -14,13 +14,32 @@ body {
     background-color: lightblue;
     padding: 1%;
     align-items: center;
-    margin-left: -10px;
+    margin-left: -10px; 
     margin-right: -10px;
     margin-top: -10px;
 }
 
 .stats-container {
+    /* Code added */
     display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+/* hover stats container added */
+.stats-container:hover {
+    box-shadow: 0 0 30px lightblue;
+}
+
+/* enhanced pointer to stats card */
+.stats-card:hover {
+    box-shadow: 0 0 30px black;
+    cursor: pointer;
+}
+/* enhanced pointer to all the buttons */
+#unfunded-btn:hover, #funded-btn:hover, #all-btn:hover {
+    box-shadow: 0 0 30px lightblue;
+    cursor: pointer;
+
 }
 
 .stats-card {
@@ -40,6 +59,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    
 }
 
 .game-img {
