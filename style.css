@@ -6,7 +6,22 @@ body {
 }
 
 #tentacles {
-    width: 50px;
+    width: 100px;
+}
+
+h2 {
+    display:flex;
+    justify-content: center;
+}
+
+#first-game {
+    color: gold;
+    background-color: rgb(112, 75, 16);
+}
+
+#second-game {
+    color: rgb(214, 214, 214);
+    background-color: rgb(125, 125, 125);
 }
 
 .header {
@@ -21,6 +36,12 @@ body {
 
 .stats-container {
     display: flex;
+    align-items: center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
