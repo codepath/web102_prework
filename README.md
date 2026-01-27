@@ -20,10 +20,9 @@ The following **optional** features are implemented:
 ## Video Walkthrough
 
 ## Video Walkthrough
-
 Here's a walkthrough of implemented features:
 
-[Watch the walkthrough](https://github.com/shirinadan/web102_prework/blob/main/webdev_prework_102.mp4)
+[Watch the walkthrough](https://drive.google.com/file/d/1d4si9mNhOA34mZVLNAjdKfNzNkgQ_Ly8/view?usp=sharing)
 
 Video recorded with Zoom.
 
