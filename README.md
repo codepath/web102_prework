@@ -9,31 +9,26 @@ Time spent: 1.5 hours spent in total
 ## Required Features
 
 The following **required** functionality is completed:
-
 * [x] The introduction section explains the background of the company and how many games remain unfunded.
-* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Stats section includes information about the total contributions and dollars raised, as well as the top two most funded games.
 * [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
 * [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
+* [ ] No optional features were implemented.
 
-* [ ] List anything else that you can get done to improve the app functionality!
+## Video Walkthrough
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+[Watch the walkthrough](https://github.com/shirinadan/web102_prework/blob/main/webdev_prework_102.mp4)
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+Video recorded with Zoom.
 
 ## Notes
-During development I:
+During development, I:
 - Got practice using `reduce`, `filter`, and DOM manipulation together.
 - Debugged a duplicate `const` declaration that was preventing the stats from rendering.
 - Became more comfortable wiring up event listeners and updating the page dynamically.
