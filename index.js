@@ -12,9 +12,9 @@ const GAMES_JSON = JSON.parse(GAMES_DATA)
 
 // remove all child elements from a parent element in the DOM
 function deleteChildElements(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
 }
 
 /*****************************************************************************
@@ -28,27 +28,30 @@ const gamesContainer = document.getElementById("games-container");
 // create a function that adds all data from the games array to the page
 function addGamesToPage(games) {
 
-    // loop over each item in the data
-
-
-        // create a new div element, which will become the game card
-
-
-        // add the class game-card to the list
-
-
-        // set the inner HTML using a template literal to display some info 
-        // about each game
-        // TIP: if your images are not displaying, make sure there is space
-        // between the end of the src attribute and the end of the tag ("/>")
-
-
-        // append the game to the games-container
-
+  // loop over each item in the data
+  for (let game of games) {
+    // create a new div element, which will become the game card
+    let div = document.createElement("div")
+    // add the class game-card to the list
+    div.classList.add("game-card")
+    // set the inner HTML using a template literal to display some info 
+    // about each game
+    // TIP: if your images are not displaying, make sure there is space
+    // between the end of the src attribute and the end of the tag ("/>")
+    div.innerHTML = `<h1>${game.name}</h1>
+      <h4>${game.description}</h4>
+      <progress value="${game.pledged}" max="${game.goal}"></progress><br>
+      Backers: ${game.backers}
+      <img src="${game.img}" class="game-img">
+    `
+    // append the game to the games-container
+    document.querySelector("#games-container").appendChild(div)
+  }
 }
 
 // call the function we just defined using the correct variable
 // later, we'll call this function using a different list of games
+addGamesToPage(GAMES_JSON)
 
 
 /*************************************************************************************
@@ -84,31 +87,31 @@ const gamesCard = document.getElementById("num-games");
 
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
-    deleteChildElements(gamesContainer);
+  deleteChildElements(gamesContainer);
 
-    // use filter() to get a list of games that have not yet met their goal
+  // use filter() to get a list of games that have not yet met their goal
 
 
-    // use the function we previously created to add the unfunded games to the DOM
+  // use the function we previously created to add the unfunded games to the DOM
 
 }
 
 // show only games that are fully funded
 function filterFundedOnly() {
-    deleteChildElements(gamesContainer);
+  deleteChildElements(gamesContainer);
 
-    // use filter() to get a list of games that have met or exceeded their goal
+  // use filter() to get a list of games that have met or exceeded their goal
 
 
-    // use the function we previously created to add unfunded games to the DOM
+  // use the function we previously created to add unfunded games to the DOM
 
 }
 
 // show all games
 function showAllGames() {
-    deleteChildElements(gamesContainer);
+  deleteChildElements(gamesContainer);
 
-    // add all games from the JSON data to the DOM
+  // add all games from the JSON data to the DOM
 
 }
 
@@ -144,8 +147,8 @@ const descriptionContainer = document.getElementById("description-container");
 const firstGameContainer = document.getElementById("first-game");
 const secondGameContainer = document.getElementById("second-game");
 
-const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
-    return item2.pledged - item1.pledged;
+const sortedGames = GAMES_JSON.sort((item1, item2) => {
+  return item2.pledged - item1.pledged;
 });
 
 // use destructuring and the spread operator to grab the first and second games
