@@ -1,6 +1,6 @@
 # WEB102 Prework - *Octopus - Sea Monster*
 
-Submitted by: **Christine Grimadeay**
+Submitted by: **Christine Grimadeau**
 
 **Octopus** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
