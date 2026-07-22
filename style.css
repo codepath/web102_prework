@@ -21,6 +21,12 @@ body {
 
 .stats-container {
     display: flex;
+    align-items:center;
+}
+
+.stats-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
 }
 
 .stats-card {
@@ -43,9 +49,12 @@ body {
 }
 
 .game-img {
-    width: 100%;
+    width: 100%;/* Forces element to match parent size even if tiny */
     border-radius: 5px;
     box-shadow: 0 0 10px #FFFFFF;
+    max-height: 100%; /* Forces element to match parent size if */
+    max-width:100%;   /* its larger and calculates value based */
+                      /* on immediate parent container width and height */
 }
 
 .game-card {
