@@ -26,7 +26,7 @@ body {
 
 .stats-container:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px rgb(230, 208, 173);
 }
 
 .stats-card {
@@ -65,7 +65,7 @@ body {
 
 .game-card:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px lightblue;
+    box-shadow: 0 0 30px rgb(204, 173, 230);
 }
 
 #button-container {
