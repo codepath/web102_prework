@@ -55,7 +55,7 @@ function addGamesToPage(games) {
 }
 
 // call the function we just defined using the correct variable
-addGamesToPage(GAMES_JSON); 
+addGamesToPage(GAMES_JSON);
 // later, we'll call this function using a different list of games
 
 
@@ -85,8 +85,6 @@ const totalRaised = GAMES_JSON.reduce((acc, game) => {
 }, 0);
 raisedCard.innerHTML = `$${totalRaised.toLocaleString()}`;
 
-
-
 // grab number of games card and set its inner HTML
 const gamesCard = document.getElementById("num-games");
 gamesCard.innerHTML = `${GAMES_JSON.length}`;
@@ -104,11 +102,24 @@ function filterUnfundedOnly() {
 
     // use filter() to get a list of games that have not yet met their goal
     const unfundedGames = GAMES_JSON.filter((game) => {
-       return game.pledged >= game.goal;
+        return game.pledged < game.goal;
     });
 
     // use the function we previously created to add the unfunded games to the DOM
     addGamesToPage(unfundedGames);
+}
+
+// show only games that are fully funded
+function filterFundedOnly() {
+    deleteChildElements(gamesContainer);
+
+    // use filter() to get a list of games that have met or exceeded their goal
+    const fundedGames = GAMES_JSON.filter((game) => {
+        return game.pledged >= game.goal;
+    });
+
+    // use the function we previously created to add the funded games to the DOM
+    addGamesToPage(fundedGames);
 }
 
 // show all games
@@ -143,11 +154,14 @@ const numUnfundedGames = GAMES_JSON.reduce((count, game) => {
     return game.pledged < game.goal ? count + 1 : count;
 }, 0);
 
-
 // create a string that explains the number of unfunded games using the ternary operator
-
+const displayStr = `A total of ${totalRaised.toLocaleString()} has been raised for ${GAMES_JSON.length} games. Currently, ${numUnfundedGames} ${numUnfundedGames === 1 ? "game remains" : "games remain"} unfunded. We need your help to fund these amazing games!`;
 
 // create a new DOM element containing the template string and append it to the description container
+const unfundedDescription = document.createElement("p");
+unfundedDescription.innerHTML = displayStr;
+descriptionContainer.appendChild(unfundedDescription);
+
 
 /************************************************************************************
  * Challenge 7: Select & display the top 2 games
