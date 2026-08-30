@@ -1,23 +1,23 @@
-# WEB102 Prework - *Name of App Here*
+# WEB102 Prework - *Sea Monster Crowdfunding*
 
-Submitted by: **Your Name Here**
+Submitted by: **Lyno Takudzwa Chihwehwete**
 
-**Name of your app** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
+**Sea Monster Crowdfunding** is a website for the company Sea Monster Crowdfunding that displays information about the games they have funded.
 
-Time spent: **X** hours spent in total
+Time spent: **20** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-* [ ] The introduction section explains the background of the company and how many games remain unfunded.
-* [ ] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
-* [ ] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
-* [ ] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
+* [x] The introduction section explains the background of the company and how many games remain unfunded.
+* [x] The Stats section includes information about the total contributions and dollars raised as well as the top two most funded games.
+* [x] The Our Games section initially displays all games funded by Sea Monster Crowdfunding
+* [x] The Our Games section has three buttons that allow the user to display only unfunded games, only funded games, or all games.
 
 The following **optional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Added a live search bar that filters the game cards by name as the user types, using the `input` event and a case-insensitive substring match.
 
 ## Video Walkthrough
 
@@ -34,11 +34,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The main challenge was getting the dynamic rendering and filtering to work together cleanly. Each filter and the search feature reuse the same `addGamesToPage` function, so the container has to be cleared with `deleteChildElements` before re-rendering, otherwise the filtered games stack on top of the ones already displayed instead of replacing them. Making sure the funded/unfunded comparisons used the right operators (`<` for unfunded, `>=` for funded, so games that exactly meet their goal still count as funded) also took some care. One thing to be aware of: sorting for the top two games uses `.sort()`, which reorders the underlying data array in place.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2026
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
