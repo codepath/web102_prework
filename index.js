@@ -140,6 +140,27 @@ unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
 allBtn.addEventListener("click", showAllGames);
 
+// grab the search input
+const searchInput = document.getElementById("search-input");
+
+// filter games by name as the user types
+function searchGames() {
+    deleteChildElements(gamesContainer);
+
+    // get the typed text, lowercased so the match is case-insensitive
+    const query = searchInput.value.toLowerCase();
+
+    // keep only games whose name contains the query
+    const matchingGames = GAMES_JSON.filter((game) => {
+        return game.name.toLowerCase().includes(query);
+    });
+
+    addGamesToPage(matchingGames);
+}
+
+// run the search on every keystroke
+searchInput.addEventListener("input", searchGames);
+
 
 /*************************************************************************************
  * Challenge 6: Add more information at the top of the page about the company.
@@ -176,7 +197,14 @@ const sortedGames =  GAMES_JSON.sort( (item1, item2) => {
 });
 
 // use destructuring and the spread operator to grab the first and second games
+const [firstGame, secondGame, ...restOfGames] = sortedGames;
 
 // create a new element to hold the name of the top pledge game, then append it to the correct element
+const firstGameName = document.createElement("p");
+firstGameName.innerHTML = firstGame.name;
+firstGameContainer.appendChild(firstGameName);
 
 // do the same for the runner up item
+const secondGameName = document.createElement("p");
+secondGameName.innerHTML = secondGame.name;
+secondGameContainer.appendChild(secondGameName);
